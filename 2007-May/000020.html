@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Problem at Windows XP
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2007-May/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Problem%20at%20Windows%20XP&In-Reply-To=%3C001301c79a07%24de908410%246502a8c0%40albatros%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000019.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Problem at Windows XP</H1>
+    <B>canorus-user at lists.berlios.de</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Problem%20at%20Windows%20XP&In-Reply-To=%3C001301c79a07%24de908410%246502a8c0%40albatros%3E"
+       TITLE="[Canorus-user] Problem at Windows XP">canorus-user at lists.berlios.de
+       </A><BR>
+    <I>Sat May 19 13:21:37 CEST 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000019.html">[Canorus-user] Problem at Windows XP
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#20">[ date ]</a>
+              <a href="thread.html#20">[ thread ]</a>
+              <a href="subject.html#20">[ subject ]</a>
+              <a href="author.html#20">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Matev&#382;,
+
+&gt;<i> Check out developer's docs:
+</I>&gt;<i> <A HREF="https://canorus.berlios.de/wiki/index.php/Developers_Guide">https://canorus.berlios.de/wiki/index.php/Developers_Guide</A>
+</I>I will download the source and give it a try with VS.
+
+&gt;&gt;<i> I found PNG bitmaps in C:\Programme\Canorus\images, some of them are 
+</I>&gt;&gt;<i> notes,
+</I>&gt;&gt;<i> sharp and flat symbols etc. There are SVG files (xml format) too, but I 
+</I>&gt;&gt;<i> dont
+</I>&gt;&gt;<i> have a program to view them. Should I check for any missing file?
+</I>&gt;&gt;<i>
+</I>&gt;<i>I think icons are all there where they should be - at least on my
+</I>&gt;<i>testing platforms where icons weren't rendered correctly. The problem
+</I>&gt;<i>IMO is in rendering the scalable SVG icon (btw. this is an open XML
+</I>&gt;<i>standard and SVG file format can be viewed in any vector drawing
+</I>&gt;<i>application, eg. www.inkscape.org) to a widget (button, tool button,
+</I>&gt;<i>canvas) which should work out of the box on any platform but obviously
+</I>&gt;<i>it doesn't.
+</I>
+I monitored the file access of Canorus.exe. Following files are not found, 
+even in PATH:
+
+C:\Programme\Canorus\qt.conf - not found at all.
+C:\Programme\Canorus\lang\de_DE.qm.qm
+C:\Programme\Canorus\lib\
+C:\Programme\lib\
+C:\lib\
+C:\Programme\Canorus\site.pyd
+C:\Programme\Canorus\site.py
+C:\Programme\Canorus\site.pyw
+C:\Programme\Canorus\site.pyc
+  [ I abbreviate this python file search in this way: ]
+C:\Programme\Canorus\warnings.pyd ~.py ~.pyw ~.pc
+C:\Programme\Canorus\swig_runtime_data3.pyd ~.py ~.pyw ~.pc
+C:\Programme\Canorus\plugins
+wintab32.dll
+C:\Programme\Canorus\newdocument.pyd ~.py ~.pyw ~.pc
+C:\Programme\Canorus\scripts\newdocument.pyd
+
+There are only two .py* files below the Canorus directory:
+C:\Programme\Canorus\scripts\newdocument.py
+C:\Programme\Canorus\scripts\newdocument.pyc
+Are they optional or is there an installation problem? The first line of my 
+error trace tells me, that at least site.py should be there.
+
+I unistalled and re-installed Canorus. No success. Attached are the 
+installation details.
+
+I downloaded the ZIP version of Canorus-0.3 and looked for python scripts. 
+There are only the newdocument.py and the plugintest scripts.
+
+Best regards, Helge
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000019.html">[Canorus-user] Problem at Windows XP
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#20">[ date ]</a>
+              <a href="thread.html#20">[ thread ]</a>
+              <a href="subject.html#20">[ subject ]</a>
+              <a href="author.html#20">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

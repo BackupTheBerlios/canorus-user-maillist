@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Lyrics context problems
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2009-June/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Lyrics%20context%20problems&In-Reply-To=%3C200906160841.40612.andreas%40mathematik.uni-marburg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000266.html">
+   <LINK REL="Next"  HREF="000268.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Lyrics context problems</H1>
+    <B>Andreas Schneider</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Lyrics%20context%20problems&In-Reply-To=%3C200906160841.40612.andreas%40mathematik.uni-marburg.de%3E"
+       TITLE="[Canorus-user] Lyrics context problems">andreas at Mathematik.Uni-Marburg.de
+       </A><BR>
+    <I>Tue Jun 16 08:41:40 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000266.html">[Canorus-user] Lilypond export in R1104
+</A></li>
+        <LI>Next message: <A HREF="000268.html">[Canorus-user] Lyrics context problems
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#267">[ date ]</a>
+              <a href="thread.html#267">[ thread ]</a>
+              <a href="subject.html#267">[ subject ]</a>
+              <a href="author.html#267">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+while working with Canorus (R1130) I encountered some problems with lyrics 
+contexts. Copy and paste of lyrics does not work. With the attached file, as 
+I copied the lyrics of the first voice (Cantus) and inserted it to the second 
+voice (Altus), the result was a total mess. The syllables were not displayed 
+under notes at all, but anywhere. This can be resolved by saving, closing and 
+re-opening the file. But still, there were notes without text in between. 
+This can also be seen in the print preview (before and after the close-open 
+precedure). Cutting and pasting parts to move syllables to the correct notes 
+did not work either, so in the end I had to re-enter the text by hand. Then I 
+copied the text of the first part of Altus to the clipboard, but on pasting 
+it to Tenor, Canorus crashed completely with the following message:
+
+ASSERT: &quot;!isEmpty()&quot; in file /usr/include/qt4/QtCore/qlist.h, line 248
+
+Strangely, after I started Canorus again, the same operation did not crash the 
+program again (but as above there were notes without text in between so I had 
+to rearrange them).
+
+By the way, it is very comlicated to switch from inserting notes to inserting 
+the corresponding lyrics: you have to go to edit mode, click the 
+corresponding lyrics context, click the &quot;La&quot; button and then click the lyrics 
+context again. This should be simpler, e.g. with a shortcut to change from 
+insert or edit mode to the lyrics of the currently selected/inserted note. 
+Similary it should be easier to switch between the different lyrics contexts. 
+Another thing: On inserting a lyrics context, by default it should be 
+attributed to the staff directly above it instead of the first staff of the 
+sheet, which is irritating.
+
+With the attached file, I had yet another problem. After importing it from a 
+MIDI file, I inserted a key signature, but that did not take effect in the 
+output. The reason was that a hidden C major key signature was still present 
+which can be &quot;blindfold&quot; clicked and changed to the desired key signature. 
+This can be still seen in the Cantus voice (I have corrected it for the other
+voices).
+
+Andreas
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Come_again.can
+Type: application/x-gzip
+Size: 3718 bytes
+Desc: not available
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/canorus-user/attachments/20090616/5cb66c26/attachment.bin">https://lists.berlios.de/pipermail/canorus-user/attachments/20090616/5cb66c26/attachment.bin</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000266.html">[Canorus-user] Lilypond export in R1104
+</A></li>
+	<LI>Next message: <A HREF="000268.html">[Canorus-user] Lyrics context problems
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#267">[ date ]</a>
+              <a href="thread.html#267">[ thread ]</a>
+              <a href="subject.html#267">[ subject ]</a>
+              <a href="author.html#267">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Compiling NoteEdit
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2008-March/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compiling%20NoteEdit&In-Reply-To=%3C47EBFE12.2090408%40web.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000108.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Compiling NoteEdit</H1>
+    <B>Reinhard</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compiling%20NoteEdit&In-Reply-To=%3C47EBFE12.2090408%40web.de%3E"
+       TITLE="[Canorus-user] Compiling NoteEdit">suamor at web.de
+       </A><BR>
+    <I>Thu Mar 27 21:05:38 CET 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000108.html">[Canorus-user] Compiling NoteEdit
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#106">[ date ]</a>
+              <a href="thread.html#106">[ thread ]</a>
+              <a href="subject.html#106">[ subject ]</a>
+              <a href="author.html#106">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>H Nathan,
+
+Nathan Hale schrieb:
+&gt;<i> Hello All,
+</I>&gt;<i> 
+</I>&gt;<i> Please let me know if this is not the appropriate list for NoteEdit
+</I>&gt;<i> questions, and I'll take this somewhere else.
+</I>
+The correct list is the NoteEdit user mailing list. NoteEdit is no longer
+actively developed but it still has many feature Canorus is still missing.
+I'd be happy if Canorus would get those features this year but that mainly
+depends on development activity (being unusually low this month unfortunately).
+
+&gt;<i> Basically, I'd like to run noteedit on the default distro  that's
+</I>&gt;<i> included with my EeePC. Unfortunately noteedit isn't in the repos and
+</I>&gt;<i> neither are the dev tools I'd need to compile. So, I thought I would
+</I>&gt;<i> create a static binary with
+</I>&gt;<i> 
+</I>&gt;<i> CFLAGS=-static ./configure &amp;&amp; make
+</I>
+Alternatively you could try to either recompile the debian package yourself
+(being the better way instead of compiling it manually as it integrates nicely
+with the system and you get rid of installation problems and missing files
+like in this case.
+
+&gt;<i> On my Ubuntu system and then just drop it in on Eee PC. Well, I think
+</I>&gt;<i> the build went okay...the binary launches runs from the &quot;noteedit&quot;
+</I>&gt;<i> directory just fine on Ubuntu. So I tarred it up, threw it on a usb
+</I>&gt;<i> stick, and untarred it on the Eee. When I try to run the noteedit
+</I>&gt;<i> binary, it complains about not being able to find libnoteedit.so.0.
+</I>&gt;<i> Any ideas?
+</I>
+Yes, this lib needs to be installed correctly in /usr/(local)/lib for example.
+Also you might need to install the tse3 lib and some kde libs if there are
+problems running NoteEdit. That's why I recommand to base your manual build
+on the debian package.
+
+Kind regards,
+
+Reinhard Katzmann
+-- 
+Software-Engineer, Developer of User Interfaces
+Project: Canorus - the next generation music score editor -
+<A HREF="http://canorus.berlios.de">http://canorus.berlios.de</A>
+GnuPG Public Key available on request
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000108.html">[Canorus-user] Compiling NoteEdit
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#106">[ date ]</a>
+              <a href="thread.html#106">[ thread ]</a>
+              <a href="subject.html#106">[ subject ]</a>
+              <a href="author.html#106">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

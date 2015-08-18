@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] canorus crashes
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2007-October/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20canorus%20crashes&In-Reply-To=%3CPine.LNX.4.64.0710180845070.3381%40localhost.localdomain%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000069.html">
+   <LINK REL="Next"  HREF="000071.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] canorus crashes</H1>
+    <B>canorus-user at lists.berlios.de</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20canorus%20crashes&In-Reply-To=%3CPine.LNX.4.64.0710180845070.3381%40localhost.localdomain%3E"
+       TITLE="[Canorus-user] canorus crashes">canorus-user at lists.berlios.de
+       </A><BR>
+    <I>Thu Oct 18 08:51:27 CEST 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000069.html">[Canorus-user] canorus crashes
+</A></li>
+        <LI>Next message: <A HREF="000071.html">[Canorus-user] canorus crashes
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#70">[ date ]</a>
+              <a href="thread.html#70">[ thread ]</a>
+              <a href="subject.html#70">[ subject ]</a>
+              <a href="author.html#70">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On Thu, 18 Oct 2007, <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">canorus-user at lists.berlios.de</A> wrote:
+
+&gt;<i> Hm.. very interesting.
+</I>&gt;<i>Try deleting recovery* in ~/.config/Canorus and rerun Canorus.
+</I>&gt;<i>Or even better, could you send those files here before deleting them so
+</I>&gt;<i>we could analyze them.
+</I>
+&gt;&gt;<i> #0  0x00c31597 in QString::operator= () from /usr/lib/libQtCore.so.4
+</I>&gt;&gt;<i> #1  0x080b3145 in CADocument::setFileName ()
+</I>&gt;&gt;<i> #2  0x080b4c68 in CAAutoRecovery::openRecovery ()
+</I>&gt;&gt;<i> #3  0x0809b66c in main ()
+</I>
+I found one file,  named recovery0. It was an empty file, size 0.
+I removed it and now canorus runs fine again, thank you!
+
+I guess I don't need to send you an empty file, do I ?
+
+-- 
+
+Martin Tarenskeen
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000069.html">[Canorus-user] canorus crashes
+</A></li>
+	<LI>Next message: <A HREF="000071.html">[Canorus-user] canorus crashes
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#70">[ date ]</a>
+              <a href="thread.html#70">[ thread ]</a>
+              <a href="subject.html#70">[ subject ]</a>
+              <a href="author.html#70">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] canorus new version crash
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2008-September/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20canorus%20new%20version%20crash&In-Reply-To=%3C20080903204243.GA16447%40zonnet.nl%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000119.html">
+   <LINK REL="Next"  HREF="000122.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] canorus new version crash</H1>
+    <B>Martin Tarenskeen</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20canorus%20new%20version%20crash&In-Reply-To=%3C20080903204243.GA16447%40zonnet.nl%3E"
+       TITLE="[Canorus-user] canorus new version crash">m.tarenskeen at zonnet.nl
+       </A><BR>
+    <I>Wed Sep  3 22:42:43 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000119.html">[Canorus-user] canorus new version crash
+</A></li>
+        <LI>Next message: <A HREF="000122.html">[Canorus-user] canorus new version crash
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#120">[ date ]</a>
+              <a href="thread.html#120">[ thread ]</a>
+              <a href="subject.html#120">[ subject ]</a>
+              <a href="author.html#120">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+I'm trying to build version 0.6svn.R792 but the build process exits after the 
+following messages (BTW: &quot;Fout&quot; is the Dutch word for &quot;Error&quot; ) :
+
+[ 91%] Building CXX object src/CMakeFiles/canorus.dir/moc_midirecorder.o
+/home/m.tarenskeen/Downloads/canorus-0.6svn.R792/src/moc_midirecorder.cxx: In member function `virtual int CAMidiRecorder::qt_metacall(QMetaObject::Call, int, void**)':
+/home/m.tarenskeen/Downloads/canorus-0.6svn.R792/src/moc_midirecorder.cxx:67: fout: invalid use of incomplete type `struct QVector&lt;unsigned char&gt;'
+/usr/include/QtCore/qstring.h:88: fout: declaration of `struct QVector&lt;unsigned char&gt;'
+/home/m.tarenskeen/Downloads/canorus-0.6svn.R792/src/moc_midirecorder.cxx:67: fout:   initializing argument 1 of `void CAMidiRecorder::onMidiInEvent(QVector&lt;unsigned char&gt;)'
+make[2]: *** [src/CMakeFiles/canorus.dir/moc_midirecorder.o] Fout 1
+make[1]: *** [src/CMakeFiles/canorus.dir/all] Fout 2
+make: *** [all] Fout 2
+
+
+???
+
+Martin Tarenskeen
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000119.html">[Canorus-user] canorus new version crash
+</A></li>
+	<LI>Next message: <A HREF="000122.html">[Canorus-user] canorus new version crash
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#120">[ date ]</a>
+              <a href="thread.html#120">[ thread ]</a>
+              <a href="subject.html#120">[ subject ]</a>
+              <a href="author.html#120">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

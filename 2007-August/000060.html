@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Error while compiling svn546
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2007-August/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Error%20while%20compiling%20svn546&In-Reply-To=%3C200708190828.01524.ulrich.herbst%40gmx.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000058.html">
+   <LINK REL="Next"  HREF="000061.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Error while compiling svn546</H1>
+    <B>canorus-user at lists.berlios.de</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Error%20while%20compiling%20svn546&In-Reply-To=%3C200708190828.01524.ulrich.herbst%40gmx.de%3E"
+       TITLE="[Canorus-user] Error while compiling svn546">canorus-user at lists.berlios.de
+       </A><BR>
+    <I>Sun Aug 19 08:28:01 CEST 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000058.html">[Canorus-user] Problems with cmake on debian stable
+</A></li>
+        <LI>Next message: <A HREF="000061.html">[Canorus-user] Error while compiling svn546
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#60">[ date ]</a>
+              <a href="thread.html#60">[ thread ]</a>
+              <a href="subject.html#60">[ subject ]</a>
+              <a href="author.html#60">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>cmake .
+make
+[...]
+[ 42%] Building CXX object src/CMakeFiles/canorus.dir/main.o
+/home/uherbst/src/canorus/src/ui_mainwin.h: In member function 'void 
+Ui_uiMainWindow::setupUi(QMainWindow*)':
+/home/uherbst/src/canorus/src/ui_mainwin.h:363: error: 'class QGridLayout' has 
+no member named 'setLeftMargin'
+/home/uherbst/src/canorus/src/ui_mainwin.h:364: error: 'class QGridLayout' has 
+no member named 'setTopMargin'
+/home/uherbst/src/canorus/src/ui_mainwin.h:365: error: 'class QGridLayout' has 
+no member named 'setRightMargin'
+/home/uherbst/src/canorus/src/ui_mainwin.h:366: error: 'class QGridLayout' has 
+no member named 'setBottomMargin'
+/home/uherbst/src/canorus/src/ui_mainwin.h:367: error: 'class QGridLayout' has 
+no member named 'setHorizontalSpacing'
+/home/uherbst/src/canorus/src/ui_mainwin.h:368: error: 'class QGridLayout' has 
+no member named 'setVerticalSpacing'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h: In member function 'void 
+Ui_uiSettingsDialog::setupUi(QDialog*)':
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:119: error: 'class 
+QHBoxLayout' has no member named 'setLeftMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:120: error: 'class 
+QHBoxLayout' has no member named 'setTopMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:121: error: 'class 
+QHBoxLayout' has no member named 'setRightMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:122: error: 'class 
+QHBoxLayout' has no member named 'setBottomMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:144: error: 'class 
+QVBoxLayout' has no member named 'setLeftMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:145: error: 'class 
+QVBoxLayout' has no member named 'setTopMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:146: error: 'class 
+QVBoxLayout' has no member named 'setRightMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:147: error: 'class 
+QVBoxLayout' has no member named 'setBottomMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:184: error: 'class 
+QVBoxLayout' has no member named 'setLeftMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:185: error: 'class 
+QVBoxLayout' has no member named 'setTopMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:186: error: 'class 
+QVBoxLayout' has no member named 'setRightMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:187: error: 'class 
+QVBoxLayout' has no member named 'setBottomMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:191: error: 'class 
+QHBoxLayout' has no member named 'setLeftMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:192: error: 'class 
+QHBoxLayout' has no member named 'setTopMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:193: error: 'class 
+QHBoxLayout' has no member named 'setRightMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:194: error: 'class 
+QHBoxLayout' has no member named 'setBottomMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:219: error: 'class 
+QHBoxLayout' has no member named 'setLeftMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:220: error: 'class 
+QHBoxLayout' has no member named 'setTopMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:221: error: 'class 
+QHBoxLayout' has no member named 'setRightMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:222: error: 'class 
+QHBoxLayout' has no member named 'setBottomMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:247: error: 'class 
+QHBoxLayout' has no member named 'setLeftMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:248: error: 'class 
+QHBoxLayout' has no member named 'setTopMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:249: error: 'class 
+QHBoxLayout' has no member named 'setRightMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:250: error: 'class 
+QHBoxLayout' has no member named 'setBottomMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:275: error: 'class 
+QHBoxLayout' has no member named 'setLeftMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:276: error: 'class 
+QHBoxLayout' has no member named 'setTopMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:277: error: 'class 
+QHBoxLayout' has no member named 'setRightMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:278: error: 'class 
+QHBoxLayout' has no member named 'setBottomMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:303: error: 'class 
+QHBoxLayout' has no member named 'setLeftMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:304: error: 'class 
+QHBoxLayout' has no member named 'setTopMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:305: error: 'class 
+QHBoxLayout' has no member named 'setRightMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:306: error: 'class 
+QHBoxLayout' has no member named 'setBottomMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:331: error: 'class 
+QHBoxLayout' has no member named 'setLeftMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:332: error: 'class 
+QHBoxLayout' has no member named 'setTopMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:333: error: 'class 
+QHBoxLayout' has no member named 'setRightMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:334: error: 'class 
+QHBoxLayout' has no member named 'setBottomMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:359: error: 'class 
+QHBoxLayout' has no member named 'setLeftMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:360: error: 'class 
+QHBoxLayout' has no member named 'setTopMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:361: error: 'class 
+QHBoxLayout' has no member named 'setRightMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:362: error: 'class 
+QHBoxLayout' has no member named 'setBottomMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:393: error: 'class 
+QVBoxLayout' has no member named 'setLeftMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:394: error: 'class 
+QVBoxLayout' has no member named 'setTopMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:395: error: 'class 
+QVBoxLayout' has no member named 'setRightMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:396: error: 'class 
+QVBoxLayout' has no member named 'setBottomMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:405: error: 'class 
+QHBoxLayout' has no member named 'setLeftMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:406: error: 'class 
+QHBoxLayout' has no member named 'setTopMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:407: error: 'class 
+QHBoxLayout' has no member named 'setRightMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:408: error: 'class 
+QHBoxLayout' has no member named 'setBottomMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:436: error: 'class 
+QVBoxLayout' has no member named 'setLeftMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:437: error: 'class 
+QVBoxLayout' has no member named 'setTopMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:438: error: 'class 
+QVBoxLayout' has no member named 'setRightMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:439: error: 'class 
+QVBoxLayout' has no member named 'setBottomMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:461: error: 'class 
+QHBoxLayout' has no member named 'setLeftMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:462: error: 'class 
+QHBoxLayout' has no member named 'setTopMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:463: error: 'class 
+QHBoxLayout' has no member named 'setRightMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:464: error: 'class 
+QHBoxLayout' has no member named 'setBottomMargin'
+/home/uherbst/src/canorus/src/ui_settingsdialog.h:494: error: 'class 
+QHBoxLayout' has no member named 'setLeftMargin'
+[...]
+
+What can I do about that ?
+
+Uli
+-- 
+
+                            Ulrich Herbst
+                         <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">ulrich.herbst at gmx.de</A>
+
+-------------------------------------------------------------------------------
+Fachbegriffe der Informatik - Einfach erkl&#228;rt:
+227: Benutzerdokumentation
+        Alte Kodelistings sauber geheftet. (Manfred Worm Sch&#228;fer)
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000058.html">[Canorus-user] Problems with cmake on debian stable
+</A></li>
+	<LI>Next message: <A HREF="000061.html">[Canorus-user] Error while compiling svn546
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#60">[ date ]</a>
+              <a href="thread.html#60">[ thread ]</a>
+              <a href="subject.html#60">[ subject ]</a>
+              <a href="author.html#60">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Canorus and MIDI
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2009-April/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Canorus%20and%20MIDI&In-Reply-To=%3C200904041137.05321.dcuny%40lanset.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000208.html">
+   <LINK REL="Next"  HREF="000212.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Canorus and MIDI</H1>
+    <B>David Cuny</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Canorus%20and%20MIDI&In-Reply-To=%3C200904041137.05321.dcuny%40lanset.com%3E"
+       TITLE="[Canorus-user] Canorus and MIDI">dcuny at lanset.com
+       </A><BR>
+    <I>Sat Apr  4 20:37:04 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000208.html">[Canorus-user] Canorus and MIDI
+</A></li>
+        <LI>Next message: <A HREF="000212.html">[Canorus-user] Canorus and MIDI
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#209">[ date ]</a>
+              <a href="thread.html#209">[ thread ]</a>
+              <a href="subject.html#209">[ subject ]</a>
+              <a href="author.html#209">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi, Reinhard.
+
+&gt;<i> Basically I don't see any limitation. I don't know really the core but
+</I>&gt;<i> Midi support certainly isn't finished at this point.
+</I>
+I was just surprised the velocity wasn't included at this point, since it's pretty basic.
+
+&gt;<i> I hope that's only the current implementation but our design goals are
+</I>&gt;<i> always to keep the dependencies on each classes low (in this case
+</I>&gt;<i> between voice and midi). So midi properties or objects will be at max
+</I>&gt;<i> objectcs in the voice class (or there might be some midivoice sub
+</I>&gt;<i> class in the future). The technical part aside though currently it seems 
+</I>&gt;<i> to be that way I hope that it will change. Core developers can
+</I>&gt;<i> tell you more about the design.
+</I>
+I understand that you'd want to decouple classes, and it makes sense to put most of the MIDI information int CAVoice. However, I'm not sure how you would go about implementing various time-varying effects.
+
+Imagine that you wanted a crescendo and decrescendo over the span of a single note. To do this, you'd have to emit a series of volume change MIDI events over the timespan of the instrument. The spacing of the events would depend on the resolution of the MIDI track.
+
+Having this driven from the articulation seems like a bad design plan, since the crescendo and decrescendo would need to know about MIDI. As you've said, this creates a strong dependency between classes, which is generally to be avoided.
+
+A bottom down approach would seem better, where the CANote queries the CAStaff for a list of articulation events. It could then pass these events to the MIDI controller, which could know how to implement them.
+
+But I don't see anything like that in the design discussion. As I said, the absence of MIDI volume was surprising, since it's pretty basic. I understand that there are other priorities and a limited number of developers.
+
+&gt;<i> Some simple control was planned for the release but we lack developers
+</I>&gt;<i> to do all this features we wish to have :(
+</I>
+How difficult is it to code Canorus? I'm currently working on a Java applicatio which uses the Gervill library as a base. I'd looked at using abc4j to render the notation, but it doesn't handle chords well at this point.
+
+I'm currently writing a notation front-end myself, but it's re-inventing the wheel. I've just run across Canorus, and it looks like it would be a good front-end for what I'm doing. I've dabbled a bit in Python, and some time back I'd done music composition with Prolog. I'm just scoping the project out to see if (at this point) there are any major limitations.
+
+I haven't looked at the code yet, but I can't imagine that adding basic support for MIDI velocity would be that difficult. But I'm not all that eager to start coding on yet another project, since I'm already overextended on what I'm currently doing.
+
+How difficult is it to set up the development environment for Canorus under Ubuntu? I use Eclipse on a regular basis, so I'm comfortable with that. I'm comfortable with C coding, but haven't done C++ coding. However, I'm been doing Java coding for some time, so I'm not that worried about it.
+
+However, I'd also have to dabble with SWIG, which I haven't touched in years...
+
+Perhaps I should be posting these questions on the other mailing lists?
+
+-- David Cuny
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000208.html">[Canorus-user] Canorus and MIDI
+</A></li>
+	<LI>Next message: <A HREF="000212.html">[Canorus-user] Canorus and MIDI
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#209">[ date ]</a>
+              <a href="thread.html#209">[ thread ]</a>
+              <a href="subject.html#209">[ subject ]</a>
+              <a href="author.html#209">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

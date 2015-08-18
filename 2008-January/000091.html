@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Canorus 0.5 released
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2008-January/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Canorus%200.5%20released&In-Reply-To=%3C479D0180.3070606%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000090.html">
+   <LINK REL="Next"  HREF="000092.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Canorus 0.5 released</H1>
+    <B>canorus-user at lists.berlios.de</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Canorus%200.5%20released&In-Reply-To=%3C479D0180.3070606%40gmail.com%3E"
+       TITLE="[Canorus-user] Canorus 0.5 released">canorus-user at lists.berlios.de
+       </A><BR>
+    <I>Sun Jan 27 23:11:12 CET 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000090.html">[Canorus-user] compile for win xp
+</A></li>
+        <LI>Next message: <A HREF="000092.html">[Canorus-user] Canorus 0.5 released
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#91">[ date ]</a>
+              <a href="thread.html#91">[ thread ]</a>
+              <a href="subject.html#91">[ subject ]</a>
+              <a href="author.html#91">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Canorus development team is happy to announce the new release of Canorus - a free cross-platform music score editor, version 0.5. The new version brings lots of new features and import/export improvements. Upgrade is recommended for all the users.
+
+You can download it here:
+<A HREF="http://developer.berlios.de/project/showfiles.php?group_id=6144">http://developer.berlios.de/project/showfiles.php?group_id=6144</A>
+
+*Note for Windows users*: Please use .xml file format for storing your scores. There is a known issue opening the new .can files under Microsoft Windows.
+
+Changelog:
+- Implemented infrastructure for getting MIDI-IN events.
+- Lots of internal API changes:
+  - Generalized Import and Export classes. New fileformats can now be implemented simply
+    by inheriting those classes.
+  - Import and Export are now done in their own threads.
+  - Rewritten Voice class for insertion, deletion and manipulation for music elements.
+    The score should now always stay consistent when removing a shared element from a
+    single voice.
+  - Scripting engine now uses internal CA-class name names instead of class names only.
+    This solves the naming clashing problem in various scripting languages that don't
+    use namespaces (eg. PHP) and enum&lt;-&gt;class names clashes.
+- Added marks:
+  - Arbitrary text
+  - BookMark
+  - Tempo (bpm)
+  - Ritardando, Accellerando
+  - Fermata (normal, short, long, very long)
+  - Dynamic (f, mf, p, sfz, etc.)
+  - Crescendo, Decrescendo
+  - Pedal (sustain)
+  - Instrument change (effects midi as well)
+  - Rehersal marks (A, B, C, D etc. on barlines)
+  - Repeat marks (coda, varcoda, segno, volta)
+  - Fingering (finger numbers, strings thumb, organ's left/right heel/toe)
+- Added articulation marks:
+  - Accent, Marcato, Staccatissimo, Espressivo, Staccato, Tenuto, Portato
+  - Up bow, Down bow, Flageolet, Open, Stopped
+  - Turn, ReverseTurn, Trill, Prall, Mordent, PrallPrall, PrallMordent, UpPrall,
+    DownPrall, UpMordent, DownMordent, PrallDown, PrallUp, LinePrall
+- Implemented export to Midi.
+- New file format CAN - compressed CanorusML format with resources. This is now the
+  default file format for Canorus.
+  ISSUE: Please use CanorusML file format when using the document on cross platforms.
+- Using new RtMidi-1.0.7 library.
+- New translations (Canorus speaks 12 languages):
+  - Danish
+  - Norwegian-NB
+  - Traditional Chinese
+  - German
+  - Hungarian
+  - French
+- Lots of other cleanups and bugfixes.
+
+
+Regards.
+- Matev&#382; Jekovec
+Canorus development team
+<A HREF="http://www.canorus.org">http://www.canorus.org</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000090.html">[Canorus-user] compile for win xp
+</A></li>
+	<LI>Next message: <A HREF="000092.html">[Canorus-user] Canorus 0.5 released
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#91">[ date ]</a>
+              <a href="thread.html#91">[ thread ]</a>
+              <a href="subject.html#91">[ subject ]</a>
+              <a href="author.html#91">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

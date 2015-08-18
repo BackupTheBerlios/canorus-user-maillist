@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Compile error
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2009-March/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compile%20error&In-Reply-To=%3C200903312329.40761.jakob.keres%40gmx.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000197.html">
+   <LINK REL="Next"  HREF="000200.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Compile error</H1>
+    <B>Jakob Keres</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compile%20error&In-Reply-To=%3C200903312329.40761.jakob.keres%40gmx.net%3E"
+       TITLE="[Canorus-user] Compile error">jakob.keres at gmx.net
+       </A><BR>
+    <I>Tue Mar 31 23:29:40 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000197.html">[Canorus-user] Compile error
+</A></li>
+        <LI>Next message: <A HREF="000200.html">[Canorus-user] can't install debian package
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#201">[ date ]</a>
+              <a href="thread.html#201">[ thread ]</a>
+              <a href="subject.html#201">[ subject ]</a>
+              <a href="author.html#201">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>OK, changed the value in the VERSION file but this just leads to a new error. 
+See below. Other ideas?
+
+Greets,
+Jakob
+
+
+Qt version 4.4.2
+cmake version 2.4-patch 8
+gcc version 4.1.2
+
+#uname -a
+Linux 2.6.26-gentoo-r4 #11 SMP Wed Dec 31 14:31:59 CET 2008 x86_64 Intel(R) 
+Core(TM)2 Duo CPU T9300 @ 2.50GHz GenuineIntel GNU/Linux
+
+#make
+[ 21%] Building CXX object 
+src/CMakeFiles/_CanorusPython.dir/import/musicxmlimport.o
+[ 22%] /tmp/canorus-0.7.R1002/src/import/musicxmlimport.cpp: In member 
+function 'void CAMusicXmlImport::readNote(QString, int)':
+/tmp/canorus-0.7.R1002/src/import/musicxmlimport.cpp:424: warning: 
+passing 'float' for argument 1 to 'static QList&lt;CAPlayableLength&gt; 
+CAPlayableLength::timeLengthToPlayableLengthList(int, bool, int)'
+[ 22%] Building CXX object src/CMakeFiles/_CanorusPython.dir/export/export.o
+Building CXX object src/CMakeFiles/_CanorusPython.dir/export/midiexport.o
+/tmp/canorus-0.7.R1002/src/core/archive.cpp:32: error: conversion 
+from 'double' to 'QChar' is ambiguous
+/usr/include/qt4/QtCore/qchar.h:374: note: candidates are: QChar::QChar(int)
+/usr/include/qt4/QtCore/qchar.h:373: note:                 QChar::QChar(uint)
+/usr/include/qt4/QtCore/qchar.h:372: note:                 QChar::QChar(short 
+int)
+/usr/include/qt4/QtCore/qchar.h:83: note:                 QChar::QChar(ushort)
+/usr/include/qt4/QtCore/qchar.h:79: note:                 QChar::QChar(uchar)
+/usr/include/qt4/QtCore/qchar.h:78: note:                 QChar::QChar(char)
+make[2]: *** [src/CMakeFiles/_CanorusPython.dir/core/archive.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+/tmp/canorus-0.7.R1002/src/export/midiexport.cpp: In member function 'void 
+CAMidiExport::writeFile()':
+/tmp/canorus-0.7.R1002/src/export/midiexport.cpp:255: warning: 
+passing 'double' for argument 2 to 'const QString operator+(const QString&amp;, 
+char)'
+make[1]: *** [src/CMakeFiles/_CanorusPython.dir/all] Error 2
+make: *** [all] Error 2
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000197.html">[Canorus-user] Compile error
+</A></li>
+	<LI>Next message: <A HREF="000200.html">[Canorus-user] can't install debian package
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#201">[ date ]</a>
+              <a href="thread.html#201">[ thread ]</a>
+              <a href="subject.html#201">[ subject ]</a>
+              <a href="author.html#201">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Pitch Information from the CLI
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2009-April/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Pitch%20Information%20from%20the%20CLI&In-Reply-To=%3C49D60D2A.7040304%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000204.html">
+   <LINK REL="Next"  HREF="000206.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Pitch Information from the CLI</H1>
+    <B>Matev&#382; Jekovec</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Pitch%20Information%20from%20the%20CLI&In-Reply-To=%3C49D60D2A.7040304%40gmail.com%3E"
+       TITLE="[Canorus-user] Pitch Information from the CLI">matevz.jekovec at gmail.com
+       </A><BR>
+    <I>Fri Apr  3 15:20:42 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000204.html">[Canorus-user] Pitch Information from the CLI
+</A></li>
+        <LI>Next message: <A HREF="000206.html">[Canorus-user] Pitch Information from the CLI
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#205">[ date ]</a>
+              <a href="thread.html#205">[ thread ]</a>
+              <a href="subject.html#205">[ subject ]</a>
+              <a href="author.html#205">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi David,
+
+David Cuny pravi:
+&gt;<i> &gt;From the CLI, how do I access the pitch information of the notes? I can get do something like this:
+</I>&gt;<i>
+</I>&gt;<i>    -- get the first sheet
+</I>&gt;<i>    theSheet = document.sheetAt(0)
+</I>&gt;<i>
+</I>&gt;<i>    -- get the first staff in the sheet
+</I>&gt;<i>    theStaff = theSheet.staffAt(0)
+</I>&gt;<i>
+</I>&gt;<i>    -- get the first voice on the staff
+</I>&gt;<i>    theVoice = theStaff.voiceAt(0)
+</I>&gt;<i>
+</I>&gt;<i>    -- get the notes in the first voice
+</I>&gt;<i>    theNotes = theVoice.getNoteList()
+</I>&gt;<i>
+</I>&gt;<i> However, no MIDI pitch (or any sort of pitch) doesn't seem to be easily accessible from the objects getNoteList() returns.
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>CANote has diatonicPitch() method which returns a pair noteName+accs.
+You can also call getChord() on that note or globally to gather all
+notes playing together at that time.
+&gt;<i> Also, is there a way to insert chord information? For example, I'd like to write a script that automatically thickens a line to 4 part harmony based on the function of the note (based on its approach) and the current chord. I'd like to add this as an annotation to the staff, such as &quot;CMaj7&quot; or &quot;Fm9&quot;. 
+</I>&gt;<i>   
+</I>&gt;<i> I could do this with CAText, but it's such a common thing in music, I'm surprised there isn't a dedicated class for this (and fingering diagrams). Am I looking in the wrong place?
+</I>&gt;<i>   
+</I>Chords and frets aren't implemented yet, sorry. It's on our todo list.
+
+
+Regards.
+-Matev&#382;
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000204.html">[Canorus-user] Pitch Information from the CLI
+</A></li>
+	<LI>Next message: <A HREF="000206.html">[Canorus-user] Pitch Information from the CLI
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#205">[ date ]</a>
+              <a href="thread.html#205">[ thread ]</a>
+              <a href="subject.html#205">[ subject ]</a>
+              <a href="author.html#205">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

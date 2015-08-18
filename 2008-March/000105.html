@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Compiling NoteEdit
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2008-March/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compiling%20NoteEdit&In-Reply-To=%3Cb51dc2fd0803270723m4921fbb6m4227801788dac14f%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000104.html">
+   <LINK REL="Next"  HREF="000107.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Compiling NoteEdit</H1>
+    <B>Nathan Hale</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compiling%20NoteEdit&In-Reply-To=%3Cb51dc2fd0803270723m4921fbb6m4227801788dac14f%40mail.gmail.com%3E"
+       TITLE="[Canorus-user] Compiling NoteEdit">nathan.hale at gmail.com
+       </A><BR>
+    <I>Thu Mar 27 15:23:23 CET 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000104.html">[Canorus-user] Compiling NoteEdit
+</A></li>
+        <LI>Next message: <A HREF="000107.html">[Canorus-user] Compiling NoteEdit
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#105">[ date ]</a>
+              <a href="thread.html#105">[ thread ]</a>
+              <a href="subject.html#105">[ subject ]</a>
+              <a href="author.html#105">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Helge,
+
+I went to the NoteEdit IRC and it was completely dead, so I wasn't
+sure if the the mailing list would still be active, either, so I
+figured since Canorus is the successor, I'd give it a shot! I really
+appreciate your advice even though this wasn't the best place to post
+my question...thank you.
+
+Take care,
+
+Nathan
+
+On Thu, Mar 27, 2008 at 12:42 AM, Helge Kruse
+&lt;<A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">Helge.Kruse-nospam at gmx.net</A>&gt; wrote:
+&gt;<i> Nathan,
+</I>&gt;<i>
+</I>&gt;<i>  the Canarus mailing list normally doesnt handle NoteEdit issues. Further you have not a NoteEdit but a &quot;compiling and distributing
+</I>&gt;<i>  with Linux&quot; problem. The best place to ask would be a Linux news group.
+</I>&gt;<i>
+</I>&gt;<i>  I dont know wich binaries are generated during NoteEdit build. With your error message I guess that a share object library
+</I>&gt;<i>  libnoteedit.so (SO) is generated. The version is encoded in the trailing numbers. You will need to find the SO and copy it to the
+</I>&gt;<i>  Eee in the same directory. In most cases you will find the SO.0 as a to symbolic link to the actual binary, i.e. SO.1.2.3. Copy all
+</I>&gt;<i>  of them. The actual required libraries can be detected with &quot;ldd NoteEdit&quot;. Probably you will need to &quot;register&quot; the SO with the ldd
+</I>&gt;<i>  command. You will get help with &quot;man ldd&quot; and asking the Linux news group(s).
+</I>&gt;<i>
+</I>&gt;<i>  Best regards,
+</I>&gt;<i>  Helge
+</I>&gt;<i>  (Windows CE developer)
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>  ----- Original Message -----
+</I>&gt;<i>  From: &quot;Nathan Hale&quot; &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">nathan.hale at gmail.com</A>&gt;
+</I>&gt;<i>  To: &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">canorus-user at lists.berlios.de</A>&gt;
+</I>&gt;<i>  Sent: Wednesday, March 26, 2008 8:47 PM
+</I>&gt;<i>  Subject: [Canorus-user] Compiling NoteEdit
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>  &gt; Hello All,
+</I>&gt;<i>  &gt;
+</I>&gt;<i>  &gt; Please let me know if this is not the appropriate list for NoteEdit
+</I>&gt;<i>  &gt; questions, and I'll take this somewhere else.
+</I>&gt;<i>  &gt;
+</I>&gt;<i>  &gt; Basically, I'd like to run noteedit on the default distro  that's
+</I>&gt;<i>  &gt; included with my EeePC. Unfortunately noteedit isn't in the repos and
+</I>&gt;<i>  &gt; neither are the dev tools I'd need to compile. So, I thought I would
+</I>&gt;<i>  &gt; create a static binary with
+</I>&gt;<i>  &gt;
+</I>&gt;<i>  &gt; CFLAGS=-static ./configure &amp;&amp; make
+</I>&gt;<i>  &gt;
+</I>&gt;<i>  &gt; On my Ubuntu system and then just drop it in on Eee PC. Well, I think
+</I>&gt;<i>  &gt; the build went okay...the binary launches runs from the &quot;noteedit&quot;
+</I>&gt;<i>  &gt; directory just fine on Ubuntu. So I tarred it up, threw it on a usb
+</I>&gt;<i>  &gt; stick, and untarred it on the Eee. When I try to run the noteedit
+</I>&gt;<i>  &gt; binary, it complains about not being able to find libnoteedit.so.0.
+</I>&gt;<i>  &gt; Any ideas?
+</I>&gt;<i>  &gt;
+</I>&gt;<i>  &gt; Please forgive my newbness...I'm not very experienced at compiling software.
+</I>&gt;<i>  &gt;
+</I>&gt;<i>  &gt; Thanks,
+</I>&gt;<i>  &gt; Nathan
+</I>&gt;<i>  &gt; --
+</I>&gt;<i>  &gt; Rom. 12:2
+</I>&gt;<i>  &gt; visit my website at <A HREF="http://nathanrhale.com">http://nathanrhale.com</A>
+</I>&gt;<i>  &gt;
+</I>&gt;<i>  &gt; <A HREF="http://productivelinux.com">http://productivelinux.com</A>
+</I>&gt;<i>  &gt; get more done...with Linux!
+</I>&gt;<i>  &gt; _______________________________________________
+</I>&gt;<i>  &gt; Canorus-user mailing list
+</I>&gt;<i>  &gt; <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">Canorus-user at lists.berlios.de</A>
+</I>&gt;<i>  &gt; <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">https://lists.berlios.de/mailman/listinfo/canorus-user</A>
+</I>&gt;<i>
+</I>&gt;<i>  _______________________________________________
+</I>&gt;<i>  Canorus-user mailing list
+</I>&gt;<i>  <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">Canorus-user at lists.berlios.de</A>
+</I>&gt;<i>  <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">https://lists.berlios.de/mailman/listinfo/canorus-user</A>
+</I>&gt;<i>
+</I>
+
+
+-- 
+Rom. 12:2
+visit my website at <A HREF="http://nathanrhale.com">http://nathanrhale.com</A>
+
+<A HREF="http://productivelinux.com">http://productivelinux.com</A>
+get more done...with Linux!
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000104.html">[Canorus-user] Compiling NoteEdit
+</A></li>
+	<LI>Next message: <A HREF="000107.html">[Canorus-user] Compiling NoteEdit
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#105">[ date ]</a>
+              <a href="thread.html#105">[ thread ]</a>
+              <a href="subject.html#105">[ subject ]</a>
+              <a href="author.html#105">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

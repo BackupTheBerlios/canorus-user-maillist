@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Compiling NoteEdit
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2008-March/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compiling%20NoteEdit&In-Reply-To=%3C003c01c88fcd%245bac8640%246502a8c0%40falke%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000103.html">
+   <LINK REL="Next"  HREF="000105.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Compiling NoteEdit</H1>
+    <B>Helge Kruse</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compiling%20NoteEdit&In-Reply-To=%3C003c01c88fcd%245bac8640%246502a8c0%40falke%3E"
+       TITLE="[Canorus-user] Compiling NoteEdit">Helge.Kruse-nospam at gmx.net
+       </A><BR>
+    <I>Thu Mar 27 06:42:09 CET 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000103.html">[Canorus-user] Compiling NoteEdit
+</A></li>
+        <LI>Next message: <A HREF="000105.html">[Canorus-user] Compiling NoteEdit
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#104">[ date ]</a>
+              <a href="thread.html#104">[ thread ]</a>
+              <a href="subject.html#104">[ subject ]</a>
+              <a href="author.html#104">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Nathan,
+
+the Canarus mailing list normally doesnt handle NoteEdit issues. Further you have not a NoteEdit but a &quot;compiling and distributing 
+with Linux&quot; problem. The best place to ask would be a Linux news group.
+
+I dont know wich binaries are generated during NoteEdit build. With your error message I guess that a share object library 
+libnoteedit.so (SO) is generated. The version is encoded in the trailing numbers. You will need to find the SO and copy it to the 
+Eee in the same directory. In most cases you will find the SO.0 as a to symbolic link to the actual binary, i.e. SO.1.2.3. Copy all 
+of them. The actual required libraries can be detected with &quot;ldd NoteEdit&quot;. Probably you will need to &quot;register&quot; the SO with the ldd 
+command. You will get help with &quot;man ldd&quot; and asking the Linux news group(s).
+
+Best regards,
+Helge
+(Windows CE developer)
+
+----- Original Message ----- 
+From: &quot;Nathan Hale&quot; &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">nathan.hale at gmail.com</A>&gt;
+To: &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">canorus-user at lists.berlios.de</A>&gt;
+Sent: Wednesday, March 26, 2008 8:47 PM
+Subject: [Canorus-user] Compiling NoteEdit
+
+
+&gt;<i> Hello All,
+</I>&gt;<i>
+</I>&gt;<i> Please let me know if this is not the appropriate list for NoteEdit
+</I>&gt;<i> questions, and I'll take this somewhere else.
+</I>&gt;<i>
+</I>&gt;<i> Basically, I'd like to run noteedit on the default distro  that's
+</I>&gt;<i> included with my EeePC. Unfortunately noteedit isn't in the repos and
+</I>&gt;<i> neither are the dev tools I'd need to compile. So, I thought I would
+</I>&gt;<i> create a static binary with
+</I>&gt;<i>
+</I>&gt;<i> CFLAGS=-static ./configure &amp;&amp; make
+</I>&gt;<i>
+</I>&gt;<i> On my Ubuntu system and then just drop it in on Eee PC. Well, I think
+</I>&gt;<i> the build went okay...the binary launches runs from the &quot;noteedit&quot;
+</I>&gt;<i> directory just fine on Ubuntu. So I tarred it up, threw it on a usb
+</I>&gt;<i> stick, and untarred it on the Eee. When I try to run the noteedit
+</I>&gt;<i> binary, it complains about not being able to find libnoteedit.so.0.
+</I>&gt;<i> Any ideas?
+</I>&gt;<i>
+</I>&gt;<i> Please forgive my newbness...I'm not very experienced at compiling software.
+</I>&gt;<i>
+</I>&gt;<i> Thanks,
+</I>&gt;<i> Nathan
+</I>&gt;<i> -- 
+</I>&gt;<i> Rom. 12:2
+</I>&gt;<i> visit my website at <A HREF="http://nathanrhale.com">http://nathanrhale.com</A>
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://productivelinux.com">http://productivelinux.com</A>
+</I>&gt;<i> get more done...with Linux!
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Canorus-user mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">Canorus-user at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">https://lists.berlios.de/mailman/listinfo/canorus-user</A> 
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000103.html">[Canorus-user] Compiling NoteEdit
+</A></li>
+	<LI>Next message: <A HREF="000105.html">[Canorus-user] Compiling NoteEdit
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#104">[ date ]</a>
+              <a href="thread.html#104">[ thread ]</a>
+              <a href="subject.html#104">[ subject ]</a>
+              <a href="author.html#104">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

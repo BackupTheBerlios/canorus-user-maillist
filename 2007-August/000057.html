@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Compile problem latest SVN version
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2007-August/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compile%20problem%20latest%20SVN%20version&In-Reply-To=%3CPine.LNX.4.64.0708170028480.5091%40localhost.localdomain%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000056.html">
+   <LINK REL="Next"  HREF="000059.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Compile problem latest SVN version</H1>
+    <B>canorus-user at lists.berlios.de</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compile%20problem%20latest%20SVN%20version&In-Reply-To=%3CPine.LNX.4.64.0708170028480.5091%40localhost.localdomain%3E"
+       TITLE="[Canorus-user] Compile problem latest SVN version">canorus-user at lists.berlios.de
+       </A><BR>
+    <I>Fri Aug 17 00:35:50 CEST 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000056.html">[Canorus-user] Problems with cmake on debian stable
+</A></li>
+        <LI>Next message: <A HREF="000059.html">[Canorus-user] Compile problem latest SVN version
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#57">[ date ]</a>
+              <a href="thread.html#57">[ thread ]</a>
+              <a href="subject.html#57">[ subject ]</a>
+              <a href="author.html#57">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+I'm trying to compile the current canorus version on Fedora FC7
+
+
+Compiling fails, leaving me with the following error messages:
+
+/usr/src/redhat/BUILD/canorus-0.3svn.R545/src/ui/mainwin.cpp: In member function 'void CAMainWin::pasteAt(QPoint, CAScoreViewPort*)':
+/usr/src/redhat/BUILD/canorus-0.3svn.R545/src/ui/mainwin.cpp:3052: error: passing 'const CAMimeData' as 'this' argument of 'QList&lt;CAMusElement*&gt; CAMimeData::musElements()' discards qualifiers
+make[2]: *** [src/CMakeFiles/canorus.dir/ui/mainwin.o] Error 1
+make[1]: *** [src/CMakeFiles/canorus.dir/all] Error 2
+make: *** [all] Error 2
+
+No such problems with canorus-0.3svnR543
+
+-- 
+
+Martin Tarenskeen
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000056.html">[Canorus-user] Problems with cmake on debian stable
+</A></li>
+	<LI>Next message: <A HREF="000059.html">[Canorus-user] Compile problem latest SVN version
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#57">[ date ]</a>
+              <a href="thread.html#57">[ thread ]</a>
+              <a href="subject.html#57">[ subject ]</a>
+              <a href="author.html#57">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

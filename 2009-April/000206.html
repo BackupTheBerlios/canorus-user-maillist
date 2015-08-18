@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Pitch Information from the CLI
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2009-April/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Pitch%20Information%20from%20the%20CLI&In-Reply-To=%3C200904032358.25782.dcuny%40lanset.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000205.html">
+   <LINK REL="Next"  HREF="000210.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Pitch Information from the CLI</H1>
+    <B>David Cuny</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Pitch%20Information%20from%20the%20CLI&In-Reply-To=%3C200904032358.25782.dcuny%40lanset.com%3E"
+       TITLE="[Canorus-user] Pitch Information from the CLI">dcuny at lanset.com
+       </A><BR>
+    <I>Sat Apr  4 08:58:25 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000205.html">[Canorus-user] Pitch Information from the CLI
+</A></li>
+        <LI>Next message: <A HREF="000210.html">[Canorus-user] UI Comments
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#206">[ date ]</a>
+              <a href="thread.html#206">[ thread ]</a>
+              <a href="subject.html#206">[ subject ]</a>
+              <a href="author.html#206">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Matev&#382; Jekovec wrote:
+
+&gt;<i> CANote has diatonicPitch() method which returns a pair noteName+accs.
+</I>
+Thanks!
+
+I see in the image here:
+
+	<A HREF="https://canorus.berlios.de/wiki/images/8/8f/Canorus-0.6rc-bloat.png">https://canorus.berlios.de/wiki/images/8/8f/Canorus-0.6rc-bloat.png</A>
+
+an example of what I'm looking for. Might you consider something other than noteName() as the name of the function? Perhaps getMidiPitch() ?
+
+&gt;<i> You can also call getChord() on that note or globally to gather all
+</I>&gt;<i> notes playing together at that time.
+</I>
+Does getChord get all the notes that are currently active, or the notes that were activated at that point in time? It might be less confusing if the routines were named getActiveNotes() for notes that are currently playing, and getNotesStarting() for pitches that share the same start time.
+
+&gt;<i> Chords and frets aren't implemented yet, sorry. It's on our todo list.
+</I>
+I can probably make do with the text element. I thought that perhaps CAFunctionMarking would be available for generic markup, but it appears to be very specific in terms of what it provides. Before I can &quot;thicken&quot; a given line, I need two bits of information: the harmony for that note (determined by the chord), and the note function (determined by how the note approaches the next note). I could easily use arrays to hold the information internally, but there doesn't appear to be a way to display this in a generic way to the user.
+
+Are there any example scripts available? I couldn't find any other examples of Python scripting except for what's in the Wiki webpage:
+
+	<A HREF="https://canorus.berlios.de/wiki/index.php/Plugins">https://canorus.berlios.de/wiki/index.php/Plugins</A>
+
+The description of the script is:
+
+	&quot;Let's create a new sheet with a staff and one voice in it. File test.py (using the descriptor above) could look like this:&quot;
+
+but it's essentially the same as the only script included with Canorus, and (unlike what the WIki documentation says) it creates 2 staffs, not one. It would be nice to have a more complete example, such as something that adds notes of various durations, and chords.
+
+-- David Cuny
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000205.html">[Canorus-user] Pitch Information from the CLI
+</A></li>
+	<LI>Next message: <A HREF="000210.html">[Canorus-user] UI Comments
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#206">[ date ]</a>
+              <a href="thread.html#206">[ thread ]</a>
+              <a href="subject.html#206">[ subject ]</a>
+              <a href="author.html#206">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

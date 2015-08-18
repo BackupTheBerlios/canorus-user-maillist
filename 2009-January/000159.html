@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Compiling under macosx
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2009-January/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compiling%20under%20macosx&In-Reply-To=%3C6CD5DC1A-08FB-46CC-80A0-C2E6B40F7FB7%40titanium.sabren.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000158.html">
+   <LINK REL="Next"  HREF="000149.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Compiling under macosx</H1>
+    <B>Grzegorz Adam Hankiewicz</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compiling%20under%20macosx&In-Reply-To=%3C6CD5DC1A-08FB-46CC-80A0-C2E6B40F7FB7%40titanium.sabren.com%3E"
+       TITLE="[Canorus-user] Compiling under macosx">gradha at titanium.sabren.com
+       </A><BR>
+    <I>Mon Jan  5 20:09:36 CET 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000158.html">[Canorus-user] Compiling under macosx
+</A></li>
+        <LI>Next message: <A HREF="000149.html">[Canorus-user] Compiling under macosx
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#159">[ date ]</a>
+              <a href="thread.html#159">[ thread ]</a>
+              <a href="subject.html#159">[ subject ]</a>
+              <a href="author.html#159">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>El 05/01/2009, a las 14:45, Matev&#382; Jekovec escribi&#243;:
+
+&gt;<i> Hi Grzegorz.
+</I>&gt;<i>
+</I>&gt;<i> You have to install font let it be in user or root directory. Is  
+</I>&gt;<i> there a
+</I>&gt;<i> way this could be automated when you install the universal package?
+</I>
+I don't know any. Usually the font (or any other resources) are inside  
+the bundle, and it is the program loading them that searches first  
+inside that directory. Most libraries usually have some sort of  
+environment variable that can be set to override the default search  
+paths.
+
+&gt;<i> I'd be grateful if you could provide snapshots for MacOSX. At least  
+</I>&gt;<i> for
+</I>&gt;<i> the releases. Contact me privately at matevz at jekovec dot net, if  
+</I>&gt;<i> you
+</I>&gt;<i> need any information about our current nightly build process (runs
+</I>&gt;<i> Ubuntu), if you have any mac server turned on all the time ;)
+</I>
+I have a an old macbook, so I was thinking of manually creating  
+snapshots and putting them on some web page.
+
+Today I've tried running the binary on a ppc machine with 10.5 and it  
+didn't work. The application opened the splash rectangle, but the  
+image was completely blank. After a few seconds the splash rectangle  
+disappears and the application quits. This is the log from the console:
+
+05/01/09 19:56:55 [0x0-0x2a02a].Canorus[277] Error: scripts/ not found
+05/01/09 19:56:55 [0x0-0x2a02a].Canorus[277] Error: _CanorusPython.so  
+not found
+05/01/09 19:56:58 [0x0-0x2a02a].Canorus[277] ASSERT failure in  
+QList&lt;T&gt;::at: &quot;index out of range&quot;, file /usr/local/Trolltech/Qt-4.4.0/ 
+include/QtCore/qlist.h, line 393
+05/01/09 19:56:58 com.apple.launchd[69] ([0x0-0x2a02a].Canorus[277])  
+Exited with exit code: 1
+
+Looks like the path functions don't work the same on the ppc machine. 
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000158.html">[Canorus-user] Compiling under macosx
+</A></li>
+	<LI>Next message: <A HREF="000149.html">[Canorus-user] Compiling under macosx
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#159">[ date ]</a>
+              <a href="thread.html#159">[ thread ]</a>
+              <a href="subject.html#159">[ subject ]</a>
+              <a href="author.html#159">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

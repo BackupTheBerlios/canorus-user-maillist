@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Canorus and MIDI
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2009-April/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Canorus%20and%20MIDI&In-Reply-To=%3C49D77A11.5090208%40web.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000207.html">
+   <LINK REL="Next"  HREF="000209.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Canorus and MIDI</H1>
+    <B>Reinhard Katzmann</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Canorus%20and%20MIDI&In-Reply-To=%3C49D77A11.5090208%40web.de%3E"
+       TITLE="[Canorus-user] Canorus and MIDI">suamor at web.de
+       </A><BR>
+    <I>Sat Apr  4 17:17:37 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000207.html">[Canorus-user] Canorus and MIDI
+</A></li>
+        <LI>Next message: <A HREF="000209.html">[Canorus-user] Canorus and MIDI
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#208">[ date ]</a>
+              <a href="thread.html#208">[ thread ]</a>
+              <a href="subject.html#208">[ subject ]</a>
+              <a href="author.html#208">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi David,
+
+David Cuny wrote:
+&gt;<i> How MIDI aware is Canorus, and how much do you plan to add to it?
+</I>
+Basically I don't see any limitation. I don't know really the core but
+Midi support certainly isn't finished at this point.
+
+&gt;<i> I see that CAVoice has access to the MIDI channel and program. However, it appears that this setting is global for the voice. Does this mean that if I want to switch from bowed violins to pizzicato, I'd have to create another voice on the same staff?
+</I>
+I hope that's only the current implementation but our design goals are
+always to keep the dependencies on each classes low (in this case
+between voice and midi). So midi properties or objects will be at max
+objectcs in the voice class (or there might be some midivoice sub
+class in the future). The technical part aside though currently it seems 
+to be that way I hope that it will change. Core developers can
+tell you more about the design.
+
+&gt;<i> I also don't see any way in CANote to set or adjust the velocity/volume of the instrument. This apparently means that all the voices play back at the same MIDI velocity? I assume that classes like CAFermata and CACrescendo are purely decorational?
+</I>
+I don't think this is implemented currently. AFAIK all core classes
+currently are mainly for composing, printing and simple playback. Midi
+dependencies probably will be added later in a way I explained above
+(like CAMidiNote or an (optional) object included in CANote.
+
+&gt;<i> There also appears to be no way to access MIDI controllers via events.
+</I>
+Some simple control was planned for the release but we lack developers
+to do all this features we wish to have :(
+
+&gt;<i> Are there plans for implementing support for this?
+</I>
+Certainly. Things you cannot find on our Wiki or on the feature request
+page you can add yourself as suggestion (or even better design ideas and 
+patches later :-)
+
+Regards,
+
+Reinhard
+--
+Software-Engineer, Developer of User Interfaces
+Project: Canorus - the next generation music score editor - 
+<A HREF="http://canorus.berlios.de">http://canorus.berlios.de</A>
+GnuPG Public Key available on request
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000207.html">[Canorus-user] Canorus and MIDI
+</A></li>
+	<LI>Next message: <A HREF="000209.html">[Canorus-user] Canorus and MIDI
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#208">[ date ]</a>
+              <a href="thread.html#208">[ thread ]</a>
+              <a href="subject.html#208">[ subject ]</a>
+              <a href="author.html#208">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

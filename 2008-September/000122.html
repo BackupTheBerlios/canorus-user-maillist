@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] canorus new version crash
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2008-September/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20canorus%20new%20version%20crash&In-Reply-To=%3C48C0A104.8070608%40schwaben.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000120.html">
+   <LINK REL="Next"  HREF="000123.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] canorus new version crash</H1>
+    <B>Georg Rudolph</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20canorus%20new%20version%20crash&In-Reply-To=%3C48C0A104.8070608%40schwaben.de%3E"
+       TITLE="[Canorus-user] canorus new version crash">georg.rudolph at schwaben.de
+       </A><BR>
+    <I>Fri Sep  5 05:01:24 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000120.html">[Canorus-user] canorus new version crash
+</A></li>
+        <LI>Next message: <A HREF="000123.html">[Canorus-user] canorus new version crash
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#122">[ date ]</a>
+              <a href="thread.html#122">[ thread ]</a>
+              <a href="subject.html#122">[ subject ]</a>
+              <a href="author.html#122">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Martin Tarenskeen schrieb:
+&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i> I'm trying to build version 0.6svn.R792 but the build process exits after the 
+</I>&gt;<i> following messages (BTW: &quot;Fout&quot; is the Dutch word for &quot;Error&quot; ) :
+</I>&gt;<i>
+</I>&gt;<i> [ 91%] Building CXX object src/CMakeFiles/canorus.dir/moc_midirecorder.o
+</I>&gt;<i> /home/m.tarenskeen/Downloads/canorus-0.6svn.R792/src/moc_midirecorder.cxx: In member function `virtual int CAMidiRecorder::qt_metacall(QMetaObject::Call, int, void**)':
+</I>&gt;<i> /home/m.tarenskeen/Downloads/canorus-0.6svn.R792/src/moc_midirecorder.cxx:67: fout: invalid use of incomplete type `struct QVector&lt;unsigned char&gt;'
+</I>&gt;<i> /usr/include/QtCore/qstring.h:88: fout: declaration of `struct QVector&lt;unsigned char&gt;'
+</I>&gt;<i> /home/m.tarenskeen/Downloads/canorus-0.6svn.R792/src/moc_midirecorder.cxx:67: fout:   initializing argument 1 of `void CAMidiRecorder::onMidiInEvent(QVector&lt;unsigned char&gt;)'
+</I>&gt;<i> make[2]: *** [src/CMakeFiles/canorus.dir/moc_midirecorder.o] Fout 1
+</I>&gt;<i> make[1]: *** [src/CMakeFiles/canorus.dir/all] Fout 2
+</I>&gt;<i> make: *** [all] Fout 2
+</I>&gt;<i>   
+</I>Hi Martin,
+
+I get this no compile too, on 64 bit gcc-4.3. What is your gcc version?
+The no compile got introduced in r791 with the introduction of
+midirecorder.h. The parameter 'QVector &lt;unsigned char&gt; message' seems
+not to be processed ok for gcc 4.3. When I substitute this parameter by
+a 'void * m' it compiles and works, but midi-in is not funtional then.
+
+Recently I got a link of a Suse packman person, Toni, about gcc-4.3 issues:
+
+<A HREF="http://gcc.gnu.org/gcc-4.3/porting_to.html">http://gcc.gnu.org/gcc-4.3/porting_to.html</A>
+
+Maybe someone can get something out of it?
+
+On a 32 bit gcc-4.2 it compiles fine here. Guess, it's a compiler/qt
+issue, and a guess is a guess :)
+
+It would be nice to have this resolved, maybe by a simpler parameter
+handling and a cast in the function?
+
+Regards,
+Georg
+
+
+
+
+
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000120.html">[Canorus-user] canorus new version crash
+</A></li>
+	<LI>Next message: <A HREF="000123.html">[Canorus-user] canorus new version crash
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#122">[ date ]</a>
+              <a href="thread.html#122">[ thread ]</a>
+              <a href="subject.html#122">[ subject ]</a>
+              <a href="author.html#122">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

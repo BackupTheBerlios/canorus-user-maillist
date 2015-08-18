@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] compile for win xp
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2008-January/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20compile%20for%20win%20xp&In-Reply-To=%3CF63D583AC015734096F7C2B25BE48C839AB124%40BJSSMSXM01.apac.ime.reuters.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000089.html">
+   <LINK REL="Next"  HREF="000091.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] compile for win xp</H1>
+    <B>canorus-user at lists.berlios.de</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20compile%20for%20win%20xp&In-Reply-To=%3CF63D583AC015734096F7C2B25BE48C839AB124%40BJSSMSXM01.apac.ime.reuters.com%3E"
+       TITLE="[Canorus-user] compile for win xp">canorus-user at lists.berlios.de
+       </A><BR>
+    <I>Thu Jan 24 12:55:55 CET 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000089.html">[Canorus-user] where can i download a compilabe version for winxp	vs6?
+</A></li>
+        <LI>Next message: <A HREF="000091.html">[Canorus-user] Canorus 0.5 released
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#90">[ date ]</a>
+              <a href="thread.html#90">[ thread ]</a>
+              <a href="subject.html#90">[ subject ]</a>
+              <a href="author.html#90">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+Q1.
+i tried to cmake the \src\cmakelists. what happened to that?
+Q2.
+if i set the foldder to root cmakelists. the dsw file cannot compile,
+how to fix?
+Q3.
+i tried to use 
+
+D:\backup\value\software\cmake-2.4.7-win32-x86\bin\cmake -DNO_RUBY=true
+-G &quot;MinGW Makefiles&quot; -D QT_QMAKE_EXECUTABLE=C:\Qt\4.3.3\bin\qmake.exe -D
+SWIG_DIR=D:\backup\value\software\swigwin-1.3.33 -D
+SWIG_EXECUTABLE=D:\backup\value\software\swigwin-1.3.33\swig.exe -D
+PYTHON_LIBRARIES=C:\python25\libs -D
+PYTHON_LIBRARY=C:\python25\python25.dll -D
+PYTHON_INCLUDE_PATH=C:\python25\include -D
+CMAKE_INSTALL_PREFIX=c:\canorus\test
+
+and then perform c:\mingw\bin\mingw32-make
+
+generated _CanorusPython.dll successfully but failed to link .obj files
+for canorus.exe (100% .obj done)
+
+following is part of the error msg:
+===========================
+
+/include/c++/3.4.2/bits/stl_algobase.h: undefined reference to
+`QAbstractButto
+:<i>checkStateSet()'
+</I>CMakeFiles/canorus.dir/moc_undotoolbutton.obj(.rdata$_ZTV16CAUndoToolBut
+ton[vt
+le for
+CAUndoToolButton]+0xf0):C:/MinGW/bin/../lib/gcc/mingw32/3.4.2/../../../
+/include/c++/3.4.2/bits/stl_algobase.h: undefined reference to
+`QToolButton::n
+tCheckState()'
+CMakeFiles/canorus.dir/moc_undotoolbutton.obj(.rdata$_ZTV16CAUndoToolBut
+ton[vt
+le for CAUndoToolButton]+0x118): In function
+`ZN16CAUndoToolButton11qt_metacas
+PKc':
+C:/canorus/src/moc_undotoolbutton.cxx:56: undefined reference to
+`non-virtual
+unk to QWidget::devType() const'
+CMakeFiles/canorus.dir/moc_undotoolbutton.obj(.rdata$_ZTV16CAUndoToolBut
+ton[vt
+le for
+CAUndoToolButton]+0x11c):C:/canorus/src/moc_undotoolbutton.cxx:56: unde
+ned reference to `non-virtual thunk to QWidget::paintEngine() const'
+CMakeFiles/canorus.dir/moc_undotoolbutton.obj(.rdata$_ZTV16CAUndoToolBut
+ton[vt
+le for
+CAUndoToolButton]+0x120):C:/canorus/src/moc_undotoolbutton.cxx:57: unde
+ned reference to `non-virtual thunk to QWidget::getDC() const'
+CMakeFiles/canorus.dir/moc_undotoolbutton.obj(.rdata$_ZTV16CAUndoToolBut
+ton[vt
+le for
+CAUndoToolButton]+0x124):C:/canorus/src/moc_undotoolbutton.cxx:57: unde
+ned reference to `non-virtual thunk to QWidget::releaseDC(HDC__*) const'
+CMakeFiles/canorus.dir/moc_undotoolbutton.obj(.rdata$_ZTV16CAUndoToolBut
+ton[vt
+le for
+CAUndoToolButton]+0x128):C:/canorus/src/moc_undotoolbutton.cxx:57: unde
+ned reference to `non-virtual thunk to
+QWidget::metric(QPaintDevice::PaintDevi
+Metric) const'
+collect2: ld returned 1 exit status
+mingw32-make.exe[2]: *** [src/canorus.exe] Error 1
+mingw32-make.exe[1]: *** [src/CMakeFiles/canorus.dir/all] Error 2
+C:\MingW\bin\mingw32-make.exe: *** [all] Error 2
+============================================
+
+what to try then?
+
+thanks
+dragon
+
+This email was sent to you by Reuters, the global news and information company. 
+To find out more about Reuters visit www.about.reuters.com
+
+Any views expressed in this message are those of the individual sender, 
+except where the sender specifically states them to be the views of Reuters Limited.
+
+Reuters Limited is part of the Reuters Group of companies, of which Reuters Group PLC is the ultimate parent company.
+Reuters Group PLC - Registered office address: The Reuters Building, South Colonnade, Canary Wharf, London E14 5EP, United Kingdom
+Registered No: 3296375
+Registered in England and Wales
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000089.html">[Canorus-user] where can i download a compilabe version for winxp	vs6?
+</A></li>
+	<LI>Next message: <A HREF="000091.html">[Canorus-user] Canorus 0.5 released
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#90">[ date ]</a>
+              <a href="thread.html#90">[ thread ]</a>
+              <a href="subject.html#90">[ subject ]</a>
+              <a href="author.html#90">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

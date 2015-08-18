@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Compile error
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2009-April/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compile%20error&In-Reply-To=%3Ca24024cb0903311536m2fe36a7l25b3a5d11965baea%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000203.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Compile error</H1>
+    <B>Itay Perl</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compile%20error&In-Reply-To=%3Ca24024cb0903311536m2fe36a7l25b3a5d11965baea%40mail.gmail.com%3E"
+       TITLE="[Canorus-user] Compile error">itay.perl at gmail.com
+       </A><BR>
+    <I>Wed Apr  1 00:36:20 CEST 2009</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000203.html">[Canorus-user] Print preview does not work
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#202">[ date ]</a>
+              <a href="thread.html#202">[ thread ]</a>
+              <a href="subject.html#202">[ subject ]</a>
+              <a href="author.html#202">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jakob,
+
+&gt;<i> cmake version 2.4-patch 8
+</I>Please try again using cmake 2.6.
+
+
+Regards,
+Itay
+
+On Wed, Apr 1, 2009 at 00:29, Jakob Keres &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">jakob.keres at gmx.net</A>&gt; wrote:
+&gt;<i> OK, changed the value in the VERSION file but this just leads to a new error.
+</I>&gt;<i> See below. Other ideas?
+</I>&gt;<i>
+</I>&gt;<i> Greets,
+</I>&gt;<i> Jakob
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Qt version 4.4.2
+</I>&gt;<i> cmake version 2.4-patch 8
+</I>&gt;<i> gcc version 4.1.2
+</I>&gt;<i>
+</I>&gt;<i> #uname -a
+</I>&gt;<i> Linux 2.6.26-gentoo-r4 #11 SMP Wed Dec 31 14:31:59 CET 2008 x86_64 Intel(R)
+</I>&gt;<i> Core(TM)2 Duo CPU T9300 @ 2.50GHz GenuineIntel GNU/Linux
+</I>&gt;<i>
+</I>&gt;<i> #make
+</I>&gt;<i> [ 21%] Building CXX object
+</I>&gt;<i> src/CMakeFiles/_CanorusPython.dir/import/musicxmlimport.o
+</I>&gt;<i> [ 22%] /tmp/canorus-0.7.R1002/src/import/musicxmlimport.cpp: In member
+</I>&gt;<i> function 'void CAMusicXmlImport::readNote(QString, int)':
+</I>&gt;<i> /tmp/canorus-0.7.R1002/src/import/musicxmlimport.cpp:424: warning:
+</I>&gt;<i> passing 'float' for argument 1 to 'static QList&lt;CAPlayableLength&gt;
+</I>&gt;<i> CAPlayableLength::timeLengthToPlayableLengthList(int, bool, int)'
+</I>&gt;<i> [ 22%] Building CXX object src/CMakeFiles/_CanorusPython.dir/export/export.o
+</I>&gt;<i> Building CXX object src/CMakeFiles/_CanorusPython.dir/export/midiexport.o
+</I>&gt;<i> /tmp/canorus-0.7.R1002/src/core/archive.cpp:32: error: conversion
+</I>&gt;<i> from 'double' to 'QChar' is ambiguous
+</I>&gt;<i> /usr/include/qt4/QtCore/qchar.h:374: note: candidates are: QChar::QChar(int)
+</I>&gt;<i> /usr/include/qt4/QtCore/qchar.h:373: note: &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; QChar::QChar(uint)
+</I>&gt;<i> /usr/include/qt4/QtCore/qchar.h:372: note: &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; QChar::QChar(short
+</I>&gt;<i> int)
+</I>&gt;<i> /usr/include/qt4/QtCore/qchar.h:83: note: &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; QChar::QChar(ushort)
+</I>&gt;<i> /usr/include/qt4/QtCore/qchar.h:79: note: &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; QChar::QChar(uchar)
+</I>&gt;<i> /usr/include/qt4/QtCore/qchar.h:78: note: &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; QChar::QChar(char)
+</I>&gt;<i> make[2]: *** [src/CMakeFiles/_CanorusPython.dir/core/archive.o] Error 1
+</I>&gt;<i> make[2]: *** Waiting for unfinished jobs....
+</I>&gt;<i> /tmp/canorus-0.7.R1002/src/export/midiexport.cpp: In member function 'void
+</I>&gt;<i> CAMidiExport::writeFile()':
+</I>&gt;<i> /tmp/canorus-0.7.R1002/src/export/midiexport.cpp:255: warning:
+</I>&gt;<i> passing 'double' for argument 2 to 'const QString operator+(const QString&amp;,
+</I>&gt;<i> char)'
+</I>&gt;<i> make[1]: *** [src/CMakeFiles/_CanorusPython.dir/all] Error 2
+</I>&gt;<i> make: *** [all] Error 2
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Canorus-user mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">Canorus-user at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">https://lists.berlios.de/mailman/listinfo/canorus-user</A>
+</I>&gt;<i>
+</I>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000203.html">[Canorus-user] Print preview does not work
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#202">[ date ]</a>
+              <a href="thread.html#202">[ thread ]</a>
+              <a href="subject.html#202">[ subject ]</a>
+              <a href="author.html#202">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

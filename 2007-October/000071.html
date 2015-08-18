@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] canorus crashes
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2007-October/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20canorus%20crashes&In-Reply-To=%3Ca24024cb0710180416h55c970f4x466d6f75844b1ab0%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000070.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] canorus crashes</H1>
+    <B>canorus-user at lists.berlios.de</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20canorus%20crashes&In-Reply-To=%3Ca24024cb0710180416h55c970f4x466d6f75844b1ab0%40mail.gmail.com%3E"
+       TITLE="[Canorus-user] canorus crashes">canorus-user at lists.berlios.de
+       </A><BR>
+    <I>Thu Oct 18 13:16:07 CEST 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000070.html">[Canorus-user] canorus crashes
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#71">[ date ]</a>
+              <a href="thread.html#71">[ thread ]</a>
+              <a href="subject.html#71">[ subject ]</a>
+              <a href="author.html#71">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Fixed in trunk, r604.
+Thanks for the report.
+
+Itay
+
+On 10/18/07, <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">canorus-user at lists.berlios.de</A> &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">canorus-user at lists.berlios.de</A>&gt;
+wrote:
+&gt;<i>
+</I>&gt;<i> On Thu, 18 Oct 2007, <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">canorus-user at lists.berlios.de</A> wrote:
+</I>&gt;<i>
+</I>&gt;<i> &gt; Hm.. very interesting.
+</I>&gt;<i> &gt;Try deleting recovery* in ~/.config/Canorus and rerun Canorus.
+</I>&gt;<i> &gt;Or even better, could you send those files here before deleting them so
+</I>&gt;<i> &gt;we could analyze them.
+</I>&gt;<i>
+</I>&gt;<i> &gt;&gt; #0  0x00c31597 in QString::operator= () from /usr/lib/libQtCore.so.4
+</I>&gt;<i> &gt;&gt; #1  0x080b3145 in CADocument::setFileName ()
+</I>&gt;<i> &gt;&gt; #2  0x080b4c68 in CAAutoRecovery::openRecovery ()
+</I>&gt;<i> &gt;&gt; #3  0x0809b66c in main ()
+</I>&gt;<i>
+</I>&gt;<i> I found one file,  named recovery0. It was an empty file, size 0.
+</I>&gt;<i> I removed it and now canorus runs fine again, thank you!
+</I>&gt;<i>
+</I>&gt;<i> I guess I don't need to send you an empty file, do I ?
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i>
+</I>&gt;<i> Martin Tarenskeen
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Canorus-user mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">Canorus-user at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">https://lists.berlios.de/mailman/listinfo/canorus-user</A>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/canorus-user/attachments/20071018/075b9908/attachment.html">https://lists.berlios.de/pipermail/canorus-user/attachments/20071018/075b9908/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000070.html">[Canorus-user] canorus crashes
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#71">[ date ]</a>
+              <a href="thread.html#71">[ thread ]</a>
+              <a href="subject.html#71">[ subject ]</a>
+              <a href="author.html#71">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

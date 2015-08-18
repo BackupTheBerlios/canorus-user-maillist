@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Pitch Information from the CLI
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2009-April/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Pitch%20Information%20from%20the%20CLI&In-Reply-To=%3C200904030155.50841.dcuny%40lanset.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000203.html">
+   <LINK REL="Next"  HREF="000205.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Pitch Information from the CLI</H1>
+    <B>David Cuny</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Pitch%20Information%20from%20the%20CLI&In-Reply-To=%3C200904030155.50841.dcuny%40lanset.com%3E"
+       TITLE="[Canorus-user] Pitch Information from the CLI">dcuny at lanset.com
+       </A><BR>
+    <I>Fri Apr  3 10:55:50 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000203.html">[Canorus-user] Print preview does not work
+</A></li>
+        <LI>Next message: <A HREF="000205.html">[Canorus-user] Pitch Information from the CLI
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#204">[ date ]</a>
+              <a href="thread.html#204">[ thread ]</a>
+              <a href="subject.html#204">[ subject ]</a>
+              <a href="author.html#204">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>From the CLI, how do I access the pitch information of the notes? I can get do something like this:
+
+   -- get the first sheet
+   theSheet = document.sheetAt(0)
+
+   -- get the first staff in the sheet
+   theStaff = theSheet.staffAt(0)
+
+   -- get the first voice on the staff
+   theVoice = theStaff.voiceAt(0)
+
+   -- get the notes in the first voice
+   theNotes = theVoice.getNoteList()
+
+However, no MIDI pitch (or any sort of pitch) doesn't seem to be easily accessible from the objects getNoteList() returns.
+
+Also, is there a way to insert chord information? For example, I'd like to write a script that automatically thickens a line to 4 part harmony based on the function of the note (based on its approach) and the current chord. I'd like to add this as an annotation to the staff, such as &quot;CMaj7&quot; or &quot;Fm9&quot;. 
+
+I could do this with CAText, but it's such a common thing in music, I'm surprised there isn't a dedicated class for this (and fingering diagrams). Am I looking in the wrong place?
+
+Thanks!
+
+-- David Cuny
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000203.html">[Canorus-user] Print preview does not work
+</A></li>
+	<LI>Next message: <A HREF="000205.html">[Canorus-user] Pitch Information from the CLI
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#204">[ date ]</a>
+              <a href="thread.html#204">[ thread ]</a>
+              <a href="subject.html#204">[ subject ]</a>
+              <a href="author.html#204">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

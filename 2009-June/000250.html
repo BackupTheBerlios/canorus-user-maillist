@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] canorus build problem
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2009-June/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20canorus%20build%20problem&In-Reply-To=%3C20090601125146.GA10869%40zonnet.nl%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000251.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] canorus build problem</H1>
+    <B>Martin Tarenskeen</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20canorus%20build%20problem&In-Reply-To=%3C20090601125146.GA10869%40zonnet.nl%3E"
+       TITLE="[Canorus-user] canorus build problem">m.tarenskeen at zonnet.nl
+       </A><BR>
+    <I>Mon Jun  1 14:51:46 CEST 2009</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000251.html">[Canorus-user] canorus build problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#250">[ date ]</a>
+              <a href="thread.html#250">[ thread ]</a>
+              <a href="subject.html#250">[ subject ]</a>
+              <a href="author.html#250">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+I'm trying to compile canorus-0.7svn.R1091. But it looks like I'm 
+missing something. I get stuck with:
+
+[ 18%] Building CXX object src/CMakeFiles/_CanorusPython.dir/core/muselementfactory.cpp.o
+In file included from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/canorus.h:12,
+                 from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/core/muselementfactory.cpp:21:
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/ui/settingsdialog.h:15:31: error: ui_settingsdialog.h: No such file or directory
+In file included from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/canorus.h:13,
+                 from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/core/muselementfactory.cpp:21:
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/ui/mainwin.h:17:24: error: ui_mainwin.h: No such file or directory
+In file included from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/score/barline.h:12,
+                 from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/core/muselementfactory.h:12,
+                 from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/core/muselementfactory.cpp:10:
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/score/muselement.h: In member function 'CAContext* CAMusElement::setContext(CAContext*)':
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/score/muselement.h:47: warning: no return statement in function returning non-void
+In file included from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/score/note.h:12,
+                 from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/score/voice.h:14,
+                 from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/core/muselementfactory.h:19,
+                 from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/core/muselementfactory.cpp:10:
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/score/playable.h: In member function 'virtual CAPlayable* CAPlayable::clone(CAContext*)':
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/score/playable.h:25: warning: no return statement in function returning non-void
+In file included from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/core/muselementfactory.h:25,
+                 from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/core/muselementfactory.cpp:10:
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/score/mark.h: In member function 'virtual CAMark* CAMark::clone(CAContext*)':
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/score/mark.h:38: warning: no return statement in function returning non-void
+In file included from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/core/muselementfactory.h:26,
+                 from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/core/muselementfactory.cpp:10:
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/score/articulation.h: In member function 'void* CAArticulation::setAssociatedNote(CANote*)':
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/score/articulation.h:53: warning: no return statement in function returning non-void
+In file included from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/canorus.h:12,
+                 from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/core/muselementfactory.cpp:21:
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/ui/settingsdialog.h: At global scope:
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/ui/settingsdialog.h:20: error: 'Ui' has not been declared
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/ui/settingsdialog.h:20: error: expected `{' before 'uiSettingsDialog'
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/ui/settingsdialog.h:20: error: function definition does not declare parameters
+In file included from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/ui/mainwin.h:27,
+                 from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/canorus.h:13,
+                 from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/core/muselementfactory.cpp:21:
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/interface/pyconsoleinterface.h: In member function 'char* CAPyConsoleInterface::bufferedInput(char*)':
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/interface/pyconsoleinterface.h:24: warning: no return statement in function returning non-void
+In file included from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/canorus.h:13,
+                 from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/core/muselementfactory.cpp:21:
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/ui/mainwin.h: At global scope:
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/ui/mainwin.h:61: error: expected class-name before ',' token
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/ui/mainwin.h:61: error: 'Ui' has not been declared
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/ui/mainwin.h:61: error: expected `{' before 'uiMainWindow'
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/ui/mainwin.h:61: error: function definition does not declare parameters
+In file included from /home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/core/muselementfactory.cpp:21:
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/canorus.h:30: error: 'CASettingsPage' in class 'CASettingsDialog' does not name a type
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/canorus.h: In static member function 'static void CACanorus::removeView(CAView*)':
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/canorus.h:52: error: invalid use of incomplete type 'class CAMainWin'
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/control/mainwinprogressctl.h:13: error: forward declaration of 'class CAMainWin'
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/canorus.h: In static member function 'static void CACanorus::restartTimeEditedTimes(CADocument*)':
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/canorus.h:53: error: invalid use of incomplete type 'class CAMainWin'
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/control/mainwinprogressctl.h:13: error: forward declaration of 'class CAMainWin'
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/canorus.h:53: error: invalid use of incomplete type 'class CAMainWin'
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/control/mainwinprogressctl.h:13: error: forward declaration of 'class CAMainWin'
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/core/muselementfactory.cpp: In member function 'bool CAMusElementFactory::configureMark(CAMusElement*)':
+/home/m.tarenskeen/rpmbuild/BUILD/canorus-0.7svn.R1091/src/core/muselementfactory.cpp:321: warning: enumeration value 'Undefined' not handled in switch
+make[2]: *** [src/CMakeFiles/_CanorusPython.dir/core/muselementfactory.cpp.o] Error 1
+make[1]: *** [src/CMakeFiles/_CanorusPython.dir/all] Error 2
+make: *** [all] Error 2
+fout: Bad exit status from /var/tmp/rpm-tmp.bYuW9e (%build)
+
+
+RPM build errors:
+    Bad exit status from /var/tmp/rpm-tmp.bYuW9e (%build)
+
+
+-- 
+
+Martin Tarenskeen
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000251.html">[Canorus-user] canorus build problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#250">[ date ]</a>
+              <a href="thread.html#250">[ thread ]</a>
+              <a href="subject.html#250">[ subject ]</a>
+              <a href="author.html#250">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

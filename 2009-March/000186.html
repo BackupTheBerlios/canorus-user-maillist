@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] drawablenote.cpp
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2009-March/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20drawablenote.cpp&In-Reply-To=%3C20090317130544.GA3296%40zonnet.nl%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000185.html">
+   <LINK REL="Next"  HREF="000187.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] drawablenote.cpp</H1>
+    <B>Martin Tarenskeen</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20drawablenote.cpp&In-Reply-To=%3C20090317130544.GA3296%40zonnet.nl%3E"
+       TITLE="[Canorus-user] drawablenote.cpp">m.tarenskeen at zonnet.nl
+       </A><BR>
+    <I>Tue Mar 17 14:05:44 CET 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000185.html">[Canorus-user] drawablenote.cpp
+</A></li>
+        <LI>Next message: <A HREF="000187.html">[Canorus-user] drawablenote.cpp
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#186">[ date ]</a>
+              <a href="thread.html#186">[ thread ]</a>
+              <a href="subject.html#186">[ subject ]</a>
+              <a href="author.html#186">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On Tue, Mar 17, 2009 at 01:47:12PM +0100, Martin Tarenskeen wrote:
+&gt;<i> Hi,
+</I>&gt;<i> 
+</I>&gt;<i> I have attached a little patch that, in my eyes, improves the 
+</I>&gt;<i> vertical placement of notes on the staff. ( Bug #014499 ) Still not 
+</I>&gt;<i> perfect, but much better. Maybe one of the devolopers can check it and 
+</I>&gt;<i> if it's OK, commit it to SVN.
+</I>
+Replying to my own message:
+This version of my patch is even better :-)
+
+-- 
+
+Martin Tarenskeen
+
+
+-------------- next part --------------
+diff -ur canorus-0.7svn.R982.orig/src/drawable/drawablenote.cpp canorus-0.7svn.R982/src/drawable/drawablenote.cpp
+--- canorus-0.7svn.R982.orig/src/drawable/drawablenote.cpp	2009-03-17 11:24:48.000000000 +0100
++++ canorus-0.7svn.R982/src/drawable/drawablenote.cpp	2009-03-17 11:25:41.000000000 +0100
+@@ -72,7 +72,7 @@
+ 		_height = 8;
+ 		break;
+ 	}
+-	_yPos = (int)(y - _height/2.0 + 0.5);
++	_yPos = (int)(y - _height/2.0 + 0.95);
+ 	_xPos = x;
+ 
+ 	switch (n-&gt;playableLength().musicLength()) {
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000185.html">[Canorus-user] drawablenote.cpp
+</A></li>
+	<LI>Next message: <A HREF="000187.html">[Canorus-user] drawablenote.cpp
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#186">[ date ]</a>
+              <a href="thread.html#186">[ thread ]</a>
+              <a href="subject.html#186">[ subject ]</a>
+              <a href="author.html#186">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

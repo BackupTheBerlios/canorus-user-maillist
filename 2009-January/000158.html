@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Compiling under macosx
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2009-January/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compiling%20under%20macosx&In-Reply-To=%3C49620F0F.6000005%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000157.html">
+   <LINK REL="Next"  HREF="000159.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Compiling under macosx</H1>
+    <B>Matev&#382; Jekovec</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compiling%20under%20macosx&In-Reply-To=%3C49620F0F.6000005%40gmail.com%3E"
+       TITLE="[Canorus-user] Compiling under macosx">matevz.jekovec at gmail.com
+       </A><BR>
+    <I>Mon Jan  5 14:45:51 CET 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000157.html">[Canorus-user] Compiling under macosx
+</A></li>
+        <LI>Next message: <A HREF="000159.html">[Canorus-user] Compiling under macosx
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#158">[ date ]</a>
+              <a href="thread.html#158">[ thread ]</a>
+              <a href="subject.html#158">[ subject ]</a>
+              <a href="author.html#158">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Grzegorz.
+
+You have to install font let it be in user or root directory. Is there a
+way this could be automated when you install the universal package?
+
+I'd be grateful if you could provide snapshots for MacOSX. At least for
+the releases. Contact me privately at matevz at jekovec dot net, if you
+need any information about our current nightly build process (runs
+Ubuntu), if you have any mac server turned on all the time ;)
+
+
+Regards.
+-Matev&#382;
+
+Grzegorz Adam Hankiewicz pravi:
+&gt;<i> El 03/01/2009, a las 2:31, Grzegorz Adam Hankiewicz escribi&#243;:
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>&gt;&gt;<i> ld: library not found for -lcrt1.10.5.o
+</I>&gt;&gt;<i> collect2: ld returned 1 exit status
+</I>&gt;&gt;<i> ld: library not found for -lcrt1.10.5.o
+</I>&gt;&gt;<i> collect2: ld returned 1 exit status
+</I>&gt;&gt;<i> lipo: can't open input file: /var/folders/Us/UsO0wLwGFdiPPMqe80vxZ+++
+</I>&gt;&gt;<i> +TI/-Tmp-//ccJNp37V.out (No such file or directory)
+</I>&gt;&gt;<i> make[2]: *** [src/canorus] Error 1
+</I>&gt;&gt;<i> make[1]: *** [src/CMakeFiles/canorus.dir/all] Error 2
+</I>&gt;&gt;<i> make: *** [all] Error 2
+</I>&gt;&gt;<i>     
+</I>&gt;<i>
+</I>&gt;<i> After toying with different parameters, I went into src/CMakeLists.txt  
+</I>&gt;<i> and commented out the code to build universal binaries on Mac, which  
+</I>&gt;<i> also forces building for 10.4. I think this should be a separate  
+</I>&gt;<i> thing, you can have 10.5 only with ppc/i386.
+</I>&gt;<i>
+</I>&gt;<i> For now I've built myself a 10.5 i386 only app successfully. Is there  
+</I>&gt;<i> any way to have it work without having to install the fonts? Not like  
+</I>&gt;<i> that's too much of a problem, since you can install fonts as a user  
+</I>&gt;<i> without root priviledges, but it would be really nice to have the  
+</I>&gt;<i> bundle contain everything.
+</I>&gt;<i>
+</I>&gt;<i> Also, are you interested in me building snapshots
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000157.html">[Canorus-user] Compiling under macosx
+</A></li>
+	<LI>Next message: <A HREF="000159.html">[Canorus-user] Compiling under macosx
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#158">[ date ]</a>
+              <a href="thread.html#158">[ thread ]</a>
+              <a href="subject.html#158">[ subject ]</a>
+              <a href="author.html#158">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

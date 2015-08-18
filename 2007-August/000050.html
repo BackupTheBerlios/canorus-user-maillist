@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Problemes installing harmonia
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2007-August/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Problemes%20installing%20harmonia&In-Reply-To=%3C200708081255.23836.fellner%40gmx.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000049.html">
+   <LINK REL="Next"  HREF="000051.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Problemes installing harmonia</H1>
+    <B>canorus-user at lists.berlios.de</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Problemes%20installing%20harmonia&In-Reply-To=%3C200708081255.23836.fellner%40gmx.de%3E"
+       TITLE="[Canorus-user] Problemes installing harmonia">canorus-user at lists.berlios.de
+       </A><BR>
+    <I>Wed Aug  8 12:55:23 CEST 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000049.html">[Canorus-user] possible error with swig and scripting
+</A></li>
+        <LI>Next message: <A HREF="000051.html">[Canorus-user] Problemes installing harmonia
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#50">[ date ]</a>
+              <a href="thread.html#50">[ thread ]</a>
+              <a href="subject.html#50">[ subject ]</a>
+              <a href="author.html#50">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello,
+
+I'm too stupid to install harmonia :(
+All required libs are installed (swi-prolog via portage, pyprolog on my own, 
+after some problems withg the setup-script).
+
+swi-prolog is installed in /usr/lib/pl-5.6.25
+pyprolog is globally installed to /usr/lib/python2.4/site-packages
+
+I copied harmoniaplugin-directory to /usr/share/canorus/plugins.
+This now contains, as told in the REDME:
+
+# ls -l
+[...] analysis.py
+[...] canorusplugin.xml
+[...] example_major.xml
+[...] example_minor.xml
+[...] HarmoniaLib
+[...] harmonia.py
+[...] PyPrologLib -&gt; /usr/lib/python2.4/site-packages
+[...] README
+[...] SwiPrologLib -&gt; /usr/lib/pl-5.6.25
+
+On startup, anything looks fine:
+$ canorus
+Initializing harmonia
+done.
+initializing plugintest ... done.
+
+plugintest works.
+
+When i try to launch &quot;Harmony analysis&quot;, i get an import-error:
+Traceback (most recent call last):
+  File &quot;/usr/share/canorus/plugins/harmoniaplugin/analysis.py&quot;, line 3, in ?
+    from pyprolog import swipl
+ImportError: libpl.so.5.6.25: Kann die Shared-Object-Datei nicht &#246;ffnen: Datei 
+oder Verzeichnis nicht gefunden
+
+trans: could not open shared-object-file: file or directory not found
+
+Also if i dont link to the pyprolog-installdir but copy the contents (as 
+described in the README) of my personal build-dir to PyPrologLib it does not 
+work.
+
+As i see from the harmonia-demo, it should work :(
+Any suggestions what i can do better?
+
+
+Thx
+Franz
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000049.html">[Canorus-user] possible error with swig and scripting
+</A></li>
+	<LI>Next message: <A HREF="000051.html">[Canorus-user] Problemes installing harmonia
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#50">[ date ]</a>
+              <a href="thread.html#50">[ thread ]</a>
+              <a href="subject.html#50">[ subject ]</a>
+              <a href="author.html#50">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

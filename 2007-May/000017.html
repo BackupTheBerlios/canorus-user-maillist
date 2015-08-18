@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Problem at Windows XP
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2007-May/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Problem%20at%20Windows%20XP&In-Reply-To=%3C464EB820.2040508%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000016.html">
+   <LINK REL="Next"  HREF="000018.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Problem at Windows XP</H1>
+    <B>canorus-user at lists.berlios.de</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Problem%20at%20Windows%20XP&In-Reply-To=%3C464EB820.2040508%40gmail.com%3E"
+       TITLE="[Canorus-user] Problem at Windows XP">canorus-user at lists.berlios.de
+       </A><BR>
+    <I>Sat May 19 10:41:04 CEST 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000016.html">[Canorus-user] Problem at Windows XP
+</A></li>
+        <LI>Next message: <A HREF="000018.html">[Canorus-user] Problem at Windows XP
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#17">[ date ]</a>
+              <a href="thread.html#17">[ thread ]</a>
+              <a href="subject.html#17">[ subject ]</a>
+              <a href="author.html#17">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Helge,
+
+The output below is fine - debugging only.
+
+The vector SVG icons (the ones for music elements insertion) problem is
+known and we haven't found a solution yet. On my laptop for example,
+icons work flawlessly on both clean WindowsXP+SP2, Windows2000+SP4 and
+Wine. However, on my father's Dell laptop, icons don't work on both
+WindowsXP+SP2 and Wine. So something is really weird here and I think
+it's more of a Qt/Microsoft/Driver bug than ours. The funny thing
+however is, that bitmap PNG icons work fine everywhere.
+
+
+Regards.
+- Matev&#382;
+
+<A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">canorus-user at lists.berlios.de</A> pravi:
+&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i> I installed canorus 0.3 at Windows XP SP1. When I start the program I get 
+</I>&gt;<i> always the messages below. The Canorus program window shows a system with 
+</I>&gt;<i> two staves, but has no UI to enter any music. Did anyone succeeded to use 
+</I>&gt;<i> Canorus with Windows XP?
+</I>&gt;<i>
+</I>&gt;<i> /Helge
+</I>&gt;<i>
+</I>&gt;<i> 'import site' failed; use -v for traceback
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiContextType_toggled(bool,int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiClefType_toggled(bool,int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiTimeSigType_toggled(bool,int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiBarlineType_toggled(bool,int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiSlurType_toggled(bool,int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiSheetName_returnPressed()
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiContextName_returnPressed()
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiStaffNumberOfLines_valueChanged(int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiStanzaNumber_valueChanged(int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiAssociatedVoice_currentIndexChanged(int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiPlayableLength_toggled(bool,int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiNoteStemDirection_toggled(bool,int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_midiInEvent(QVector&lt;unsigned char&gt;)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiKeySigNumberOfAccs_valChanged(int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiTimeSigBeats_valChanged(int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiTimeSigBeat_valChanged(int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_syllableEdit_keyPressEvent(QKeyEvent*,CASyllableEdit*)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiFMFunction_toggled(bool,int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiFMChordArea_toggled(bool,int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiFMTonicDegree_toggled(bool,int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiVoiceNum_valChanged(int)
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiVoiceName_returnPressed()
+</I>&gt;<i> QMetaObject::connectSlotsByName: No matching signal for 
+</I>&gt;<i> on_uiVoiceStemDirection_toggled(bool,int)
+</I>&gt;<i> swig/python detected a memory leak of type 'CAClef *', no destructor found.
+</I>&gt;<i> swig/python detected a memory leak of type 'CATimeSignature *', no 
+</I>&gt;<i> destructor found.
+</I>&gt;<i> swig/python detected a memory leak of type 'CAClef *', no destructor found.
+</I>&gt;<i> swig/python detected a memory leak of type 'CATimeSignature *', no 
+</I>&gt;<i> destructor found.
+</I>&gt;<i> swig/python detected a memory leak of type 'CAVoice *', no destructor found.
+</I>&gt;<i> swig/python detected a memory leak of type 'CAVoice *', no destructor found.
+</I>&gt;<i> swig/python detected a memory leak of type 'CAVoice *', no destructor found.
+</I>&gt;<i> swig/python detected a memory leak of type 'CAVoice *', no destructor found. 
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Canorus-user mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">Canorus-user at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">https://lists.berlios.de/mailman/listinfo/canorus-user</A>
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 252 bytes
+Desc: OpenPGP digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/canorus-user/attachments/20070519/103590a2/attachment.pgp">https://lists.berlios.de/pipermail/canorus-user/attachments/20070519/103590a2/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000016.html">[Canorus-user] Problem at Windows XP
+</A></li>
+	<LI>Next message: <A HREF="000018.html">[Canorus-user] Problem at Windows XP
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#17">[ date ]</a>
+              <a href="thread.html#17">[ thread ]</a>
+              <a href="subject.html#17">[ subject ]</a>
+              <a href="author.html#17">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

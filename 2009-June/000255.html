@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Canorus nightly build error
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2009-June/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Canorus%20nightly%20build%20error&In-Reply-To=%3C200906021033.05396.andreas%40mathematik.uni-marburg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000257.html">
+   <LINK REL="Next"  HREF="000264.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Canorus nightly build error</H1>
+    <B>Andreas Schneider</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Canorus%20nightly%20build%20error&In-Reply-To=%3C200906021033.05396.andreas%40mathematik.uni-marburg.de%3E"
+       TITLE="[Canorus-user] Canorus nightly build error">andreas at Mathematik.Uni-Marburg.de
+       </A><BR>
+    <I>Tue Jun  2 10:32:55 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000257.html">[Canorus-user] canorus build problem
+</A></li>
+        <LI>Next message: <A HREF="000264.html">[Canorus-user] Canorus build problem solved
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#255">[ date ]</a>
+              <a href="thread.html#255">[ thread ]</a>
+              <a href="subject.html#255">[ subject ]</a>
+              <a href="author.html#255">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+trying to build the current Canorus nightly on a Debian 5.0 &quot;Lenny&quot; system 
+(using the debian/rules script), on configuration I get the following error 
+which seems to me like a problem with cmake:
+
+RegularExpression::compile(): Nested *?+.
+RegularExpression::compile(): Error in compile.
+CMake Error at /usr/share/cmake-2.6/Modules/UseSWIG.cmake:76 (IF):
+  if had incorrect arguments: ${swig_source_file_path} MATCHES
+  &quot;^${CMAKE_CURRENT_SOURCE_DIR}&quot; (Regular expression
+  &quot;^/home/andreas/c++/canorus-0.7svn.R1093/src&quot; cannot compile).
+Call Stack (most recent call first):
+  /usr/share/cmake-2.6/Modules/UseSWIG.cmake:183 (SWIG_ADD_SOURCE_TO_MODULE)
+  src/CMakeLists.txt:545 (SWIG_ADD_MODULE)
+
+The library packages mentioned in the Developer Guide are installed, and I 
+have upgraded cmake from 2.6.0 to 2.6.4 (which ships with testing), but that 
+didn't solve my problem. Any ideas?
+
+Andreas
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: This is a digitally signed message part.
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/canorus-user/attachments/20090602/e7a664ae/attachment.pgp">https://lists.berlios.de/pipermail/canorus-user/attachments/20090602/e7a664ae/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000257.html">[Canorus-user] canorus build problem
+</A></li>
+	<LI>Next message: <A HREF="000264.html">[Canorus-user] Canorus build problem solved
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#255">[ date ]</a>
+              <a href="thread.html#255">[ thread ]</a>
+              <a href="subject.html#255">[ subject ]</a>
+              <a href="author.html#255">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

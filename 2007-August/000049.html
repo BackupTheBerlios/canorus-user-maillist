@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] possible error with swig and scripting
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2007-August/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20possible%20error%20with%20swig%20and%20scripting&In-Reply-To=%3C200708010936.48627.fellner%40gmx.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000050.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] possible error with swig and scripting</H1>
+    <B>canorus-user at lists.berlios.de</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20possible%20error%20with%20swig%20and%20scripting&In-Reply-To=%3C200708010936.48627.fellner%40gmx.de%3E"
+       TITLE="[Canorus-user] possible error with swig and scripting">canorus-user at lists.berlios.de
+       </A><BR>
+    <I>Wed Aug  1 09:36:48 CEST 2007</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000050.html">[Canorus-user] Problemes installing harmonia
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#49">[ date ]</a>
+              <a href="thread.html#49">[ thread ]</a>
+              <a href="subject.html#49">[ subject ]</a>
+              <a href="author.html#49">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+Could it be there is an error in src/CMakeLists.txt concerning scripting?
+You ask if swig is present, if so you include the usefiles.
+Then you do ruby/python-setup and use SWIG_ADD_MODULE/SWIG_LINK_LIBRARIES 
+without asking for USE_SWIG...
+This of course crashes the cmake-orgy ;)
+
+------- quote from line 322 -----------
+IF(USE_SWIG)
+	INCLUDE(${SWIG_USE_FILE})
+	SET(CMAKE_SWIG_OUTDIR ${CMAKE_CURRENT_SOURCE_DIR})
+ENDIF(USE_SWIG)
+
+IF(USE_RUBY)
+	INCLUDE_DIRECTORIES(${RUBY_INCLUDE_PATH})
+	
+	[...]
+
+	SWIG_ADD_MODULE(CanorusRuby ruby
+		${Canorus_Swig_Srcs}
+		${CMAKE_CURRENT_SOURCE_DIR}/scripting/canorusruby.i
+	)
+	SWIG_LINK_LIBRARIES(CanorusRuby ${RUBY_LIBRARY} ${QT_LIBRARIES})
+ENDIF(USE_RUBY)
+
+IF(USE_PYTHON)
+	INCLUDE_DIRECTORIES(${PYTHON_INCLUDE_PATH})
+
+	[...]
+
+	SWIG_ADD_MODULE(CanorusPython python 		# Warning! CMake renames CanorusPython 
+automatically to _CanorusPython
+		${Canorus_Swig_Srcs}
+		${CMAKE_CURRENT_SOURCE_DIR}/scripting/canoruspython.i
+	)
+	SWIG_LINK_LIBRARIES(CanorusPython ${PYTHON_LIBRARY} ${QT_LIBRARIES})
+ENDIF(USE_PYTHON)
+-------------------------------------------------------------
+
+Another (smaller) problem is, that you use scripting for generating new 
+documents. There should be at least a warning, to enable eather ruby or 
+python, when both are disabled.
+
+
+And.... THX!!! Canorus has really grown to a great app!
+
+Bye Franz
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000050.html">[Canorus-user] Problemes installing harmonia
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#49">[ date ]</a>
+              <a href="thread.html#49">[ thread ]</a>
+              <a href="subject.html#49">[ subject ]</a>
+              <a href="author.html#49">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

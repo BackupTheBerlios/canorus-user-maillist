@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Crash on file open
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2010-July/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Crash%20on%20file%20open&In-Reply-To=%3C4C33774E.8060003%40web.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000297.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Crash on file open</H1>
+    <B>Reinhard Katzmann</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Crash%20on%20file%20open&In-Reply-To=%3C4C33774E.8060003%40web.de%3E"
+       TITLE="[Canorus-user] Crash on file open">suamor at web.de
+       </A><BR>
+    <I>Tue Jul  6 20:34:54 CEST 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000297.html">[Canorus-user] Crash on file open
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#298">[ date ]</a>
+              <a href="thread.html#298">[ thread ]</a>
+              <a href="subject.html#298">[ subject ]</a>
+              <a href="author.html#298">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Andreas,
+
+I could reproduce the crash with your file.
+It crashes in the module canorusmlimport.cpp, line 439.
+This is the member function called &quot;endelement&quot;, which
+according to the developer docs does:
+
+&lt;cite&gt;
+	This function is called automatically by Qt SAX parser while reading the CanorusML
+	source. This function is called when a node has been closed (\&lt;/nodeName\&gt;).
+Attributes
+	for closed notes are usually not set in CanorusML format. That's why we need
+to store
+	local node attributes (set when the node is opened) each time.
+
+	The function returns true, if the node was successfully recognized and parsed;
+	otherwise false.
+&lt;/cite&gt;
+
+So you can see the crash is at the end of an music element inside
+the parser of the Canorus document. The parsing happens after having
+extracted the zipped file content.
+
+Actually for me it is an Assert by Qt which tells me
+that canorusmlimport tries to access an invalid position.
+
+Code:
+&lt;cite&gt;
+		// CASheet
+		QList&lt;CAVoice*&gt; voices = _curSheet-&gt;voiceList();
+		QList&lt;CALyricsContext*&gt; lcs = _lcMap.keys();
+		for (int i=0; i&lt;lcs.size(); i++) // assign voices from voice indices
+		{
+			qDebug(&quot;Reading from list position %d, lcs = %ld&quot;, i, lcs.size());
+			lcs.at(i)-&gt;setAssociatedVoice( voices.at(_lcMap[lcs[i]]) );
+		}
+		QList&lt;CASyllable*&gt; syllables = _syllableMap.keys();
+&lt;/cite&gt;
+Debug output:
+Reading from list position 0, lcs = 4
+Reading from list position 1, lcs = 4
+Reading from list position 2, lcs = 4
+Reading from list position 3, lcs = 4
+Reading from list position 0, lcs = 1
+ASSERT failure in QList&lt;T&gt;::at: &quot;index out of range&quot;, file
+/usr/lib/qt4/include/QtCore/qlist.h, line 439
+
+So at first some Lyrics Context was read successfully and later another Context
+was not. Luckily the Qt code causing the Assert is in the header file:
+Q_ASSERT_X(i &gt;= 0 &amp;&amp; i &lt; p.size(), &quot;QList&lt;T&gt;::at&quot;, &quot;index out of range&quot;);
+
+So I don't understand why the Assert happens as the variable i is '0' and not
+'-1' as the Assert tells me (meaning an empty list).
+
+As a temporary help you could try to unzip the can file and search for the
+lyrics context containing one element and either eleminating it or adding one
+more to it. I can't be more specific as I don't know much about the canorus
+file format. Hopefully Matevz or some other developer ready has time to analyse
+the problem and helps me fixing it.
+
+Regards,
+
+Reinhard Katzmann
+
+Am 05.07.2010 23:09, schrieb Andreas Schneider:
+
+&gt;<i> Hi all,
+</I>&gt;<i> 
+</I>&gt;<i> after spending quite some time on a score, I can't open it any more as
+</I>&gt;<i> Canorus always crashes when opening it. Can anyone give me a hint how I can
+</I>&gt;<i> recover its contents? I have attached the file to this email.
+</I>&gt;<i> 
+</I>&gt;<i> Thank you
+</I>&gt;<i> 
+</I>&gt;<i> Andreas Schneider
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Canorus-user mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">Canorus-user at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">https://lists.berlios.de/mailman/listinfo/canorus-user</A>
+</I>
+
+-- 
+Software-Engineer, Developer of User Interfaces
+Project: Canorus - the next generation music score editor -
+<A HREF="http://canorus.berlios.de">http://canorus.berlios.de</A>
+GnuPG Public Key available on request
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000297.html">[Canorus-user] Crash on file open
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#298">[ date ]</a>
+              <a href="thread.html#298">[ thread ]</a>
+              <a href="subject.html#298">[ subject ]</a>
+              <a href="author.html#298">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

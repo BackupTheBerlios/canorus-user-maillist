@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Problemes installing harmonia
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2007-August/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Problemes%20installing%20harmonia&In-Reply-To=%3C46B9E261.8000504%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000050.html">
+   <LINK REL="Next"  HREF="000052.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Problemes installing harmonia</H1>
+    <B>canorus-user at lists.berlios.de</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Problemes%20installing%20harmonia&In-Reply-To=%3C46B9E261.8000504%40gmail.com%3E"
+       TITLE="[Canorus-user] Problemes installing harmonia">canorus-user at lists.berlios.de
+       </A><BR>
+    <I>Wed Aug  8 17:33:53 CEST 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000050.html">[Canorus-user] Problemes installing harmonia
+</A></li>
+        <LI>Next message: <A HREF="000052.html">[Canorus-user] Problemes installing harmonia
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#51">[ date ]</a>
+              <a href="thread.html#51">[ thread ]</a>
+              <a href="subject.html#51">[ subject ]</a>
+              <a href="author.html#51">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Looks like there's a problem with swipl&lt;-&gt;pyprolog. First you need to
+get pyprolog working.
+
+Does it work for you, if you move to PyProlog/pyprolog directory (where
+swiplmodule.so is located) and do
+import swipl
+
+
+Regards.
+-Matev&#382;
+
+<A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">canorus-user at lists.berlios.de</A> pravi:
+&gt;<i> Hello,
+</I>&gt;<i>
+</I>&gt;<i> I'm too stupid to install harmonia :(
+</I>&gt;<i> All required libs are installed (swi-prolog via portage, pyprolog on my own, 
+</I>&gt;<i> after some problems withg the setup-script).
+</I>&gt;<i>
+</I>&gt;<i> swi-prolog is installed in /usr/lib/pl-5.6.25
+</I>&gt;<i> pyprolog is globally installed to /usr/lib/python2.4/site-packages
+</I>&gt;<i>
+</I>&gt;<i> I copied harmoniaplugin-directory to /usr/share/canorus/plugins.
+</I>&gt;<i> This now contains, as told in the REDME:
+</I>&gt;<i>
+</I>&gt;<i> # ls -l
+</I>&gt;<i> [...] analysis.py
+</I>&gt;<i> [...] canorusplugin.xml
+</I>&gt;<i> [...] example_major.xml
+</I>&gt;<i> [...] example_minor.xml
+</I>&gt;<i> [...] HarmoniaLib
+</I>&gt;<i> [...] harmonia.py
+</I>&gt;<i> [...] PyPrologLib -&gt; /usr/lib/python2.4/site-packages
+</I>&gt;<i> [...] README
+</I>&gt;<i> [...] SwiPrologLib -&gt; /usr/lib/pl-5.6.25
+</I>&gt;<i>
+</I>&gt;<i> On startup, anything looks fine:
+</I>&gt;<i> $ canorus
+</I>&gt;<i> Initializing harmonia
+</I>&gt;<i> done.
+</I>&gt;<i> initializing plugintest ... done.
+</I>&gt;<i>
+</I>&gt;<i> plugintest works.
+</I>&gt;<i>
+</I>&gt;<i> When i try to launch &quot;Harmony analysis&quot;, i get an import-error:
+</I>&gt;<i> Traceback (most recent call last):
+</I>&gt;<i>   File &quot;/usr/share/canorus/plugins/harmoniaplugin/analysis.py&quot;, line 3, in ?
+</I>&gt;<i>     from pyprolog import swipl
+</I>&gt;<i> ImportError: libpl.so.5.6.25: Kann die Shared-Object-Datei nicht &#246;ffnen: Datei 
+</I>&gt;<i> oder Verzeichnis nicht gefunden
+</I>&gt;<i>
+</I>&gt;<i> trans: could not open shared-object-file: file or directory not found
+</I>&gt;<i>
+</I>&gt;<i> Also if i dont link to the pyprolog-installdir but copy the contents (as 
+</I>&gt;<i> described in the README) of my personal build-dir to PyPrologLib it does not 
+</I>&gt;<i> work.
+</I>&gt;<i>
+</I>&gt;<i> As i see from the harmonia-demo, it should work :(
+</I>&gt;<i> Any suggestions what i can do better?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Thx
+</I>&gt;<i> Franz
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Canorus-user mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">Canorus-user at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">https://lists.berlios.de/mailman/listinfo/canorus-user</A>
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 252 bytes
+Desc: OpenPGP digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/canorus-user/attachments/20070808/e6184951/attachment.pgp">https://lists.berlios.de/pipermail/canorus-user/attachments/20070808/e6184951/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000050.html">[Canorus-user] Problemes installing harmonia
+</A></li>
+	<LI>Next message: <A HREF="000052.html">[Canorus-user] Problemes installing harmonia
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#51">[ date ]</a>
+              <a href="thread.html#51">[ thread ]</a>
+              <a href="subject.html#51">[ subject ]</a>
+              <a href="author.html#51">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

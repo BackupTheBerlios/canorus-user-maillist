@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] canorus new version crash
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2008-September/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20canorus%20new%20version%20crash&In-Reply-To=%3C48BC3BEF.5030409%40web.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000119.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] canorus new version crash</H1>
+    <B>Reinhard Katzmann</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20canorus%20new%20version%20crash&In-Reply-To=%3C48BC3BEF.5030409%40web.de%3E"
+       TITLE="[Canorus-user] canorus new version crash">suamor at web.de
+       </A><BR>
+    <I>Mon Sep  1 21:01:03 CEST 2008</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000119.html">[Canorus-user] canorus new version crash
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118">[ date ]</a>
+              <a href="thread.html#118">[ thread ]</a>
+              <a href="subject.html#118">[ subject ]</a>
+              <a href="author.html#118">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Martin,
+
+I can only guess.. I think there is a high possibility that something
+messed up with the installation... you should uninstall any old version
+of Canorus before trying the current one. According to the error message
+one Canorus API function is not found, this one is part of the CASheet
+class but I don't know when it was added to Canorus and Python plugin
+interface.
+
+Else there might also be swig problems. Which versions of swig and
+python do you use ?
+
+Regards,
+
+Reinhard
+
+Martin Tarenskeen schrieb:
+&gt;<i> Hi,
+</I>&gt;<i>  
+</I>&gt;<i> I'm glad to see canorus development is being continued after a long tome 
+</I>&gt;<i> of silence! However, when I compile and try to run svn release R790 my 
+</I>&gt;<i> system (Fedora 9) freezes already after a few mouseclicks when I try to 
+</I>&gt;<i> prepare a first score. The screen doesn't look good either.
+</I>&gt;<i> 
+</I>&gt;<i> I have managed to catch the following error message just before my 
+</I>&gt;<i> system freezes:
+</I>&gt;<i> 
+</I>&gt;<i> Traceback (most recent call last):
+</I>&gt;<i>   File &quot;/usr/share/canorus/scripts/newdocument.py&quot;, line 4, in newDefaultDocument
+</I>&gt;<i>     sheet1 = document.addSheetByName( tr('Sheet%1').replace('%1',str(1)) )
+</I>&gt;<i> AttributeError: 'PySwigObject' object has no attribute 'addSheetByName'
+</I>&gt;<i> 
+</I>&gt;<i> I hope that helps to (help me) fix the problem.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> thanx,
+</I>&gt;<i> 
+</I>&gt;<i> Martin
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Canorus-user mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">Canorus-user at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">https://lists.berlios.de/mailman/listinfo/canorus-user</A>
+</I>&gt;<i> 
+</I>
+
+-- 
+Software-Engineer, Developer of User Interfaces
+Project: Canorus - the next generation music score editor - 
+<A HREF="http://canorus.berlios.de">http://canorus.berlios.de</A>
+GnuPG Public Key available on request
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000119.html">[Canorus-user] canorus new version crash
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118">[ date ]</a>
+              <a href="thread.html#118">[ thread ]</a>
+              <a href="subject.html#118">[ subject ]</a>
+              <a href="author.html#118">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

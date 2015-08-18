@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Compiling under macosx
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2009-January/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compiling%20under%20macosx&In-Reply-To=%3C495E62BA.2050205%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000146.html">
+   <LINK REL="Next"  HREF="000148.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Compiling under macosx</H1>
+    <B>Matev&#382; Jekovec</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Compiling%20under%20macosx&In-Reply-To=%3C495E62BA.2050205%40gmail.com%3E"
+       TITLE="[Canorus-user] Compiling under macosx">matevz.jekovec at gmail.com
+       </A><BR>
+    <I>Fri Jan  2 19:53:46 CET 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000146.html">[Canorus-user] Compiling under macosx
+</A></li>
+        <LI>Next message: <A HREF="000148.html">[Canorus-user] Compiling under macosx
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#147">[ date ]</a>
+              <a href="thread.html#147">[ thread ]</a>
+              <a href="subject.html#147">[ subject ]</a>
+              <a href="author.html#147">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hm... that's wierd. Do you have libutil.so present on your system?
+$ locate libutil.so
+should return something. On Linux, it's part of libc devel library.
+
+The -lutil flag is set because Canorus python module didn't compile on
+Gentoo some time ago. You can comment this from lines 48-51 in
+src/CMakeLists.txt and rerun cmake.
+
+Please tell us, if it works so we can apply the patch. We didn't have
+any Mac users for some time so we might have broken something.
+
+
+Regards.
+-Matev&#382;
+
+Grzegorz Adam Hankiewicz pravi:
+&gt;<i> El 02/01/2009, a las 16:11, Matev&#382; Jekovec escribi&#243;:
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>&gt;&gt;<i> Ruby support is obsolete, but haven't been removed yet. Try to  
+</I>&gt;&gt;<i> compile with
+</I>&gt;&gt;<i> $ cmake -DNO_RUBY=1 .
+</I>&gt;&gt;<i>     
+</I>&gt;<i>
+</I>&gt;<i> That's on the right track. Now it stops some time later:
+</I>&gt;<i>
+</I>&gt;<i> [ 28%] Building CXX object src/CMakeFiles/_CanorusPython.dir/core/ 
+</I>&gt;<i> moc_midirecorder.o
+</I>&gt;<i> Linking CXX shared module _CanorusPython.so
+</I>&gt;<i> ldld: library not found for -lutil
+</I>&gt;<i> : library not found for -lutil
+</I>&gt;<i> collect2: collect2: ld returned 1 exit status
+</I>&gt;<i> ld returned 1 exit status
+</I>&gt;<i> lipo: can't open input file: /var/folders/Us/UsO0wLwGFdiPPMqe80vxZ+++ 
+</I>&gt;<i> +TI/-Tmp-//ccbOQZ1R.out (No such file or directory)
+</I>&gt;<i> make[2]: *** [src/_CanorusPython.so] Error 1
+</I>&gt;<i> make[1]: *** [src/CMakeFiles/_CanorusPython.dir/all] Error 2
+</I>&gt;<i> make: *** [all] Error 2
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Canorus-user mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">Canorus-user at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">https://lists.berlios.de/mailman/listinfo/canorus-user</A>
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000146.html">[Canorus-user] Compiling under macosx
+</A></li>
+	<LI>Next message: <A HREF="000148.html">[Canorus-user] Compiling under macosx
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#147">[ date ]</a>
+              <a href="thread.html#147">[ thread ]</a>
+              <a href="subject.html#147">[ subject ]</a>
+              <a href="author.html#147">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

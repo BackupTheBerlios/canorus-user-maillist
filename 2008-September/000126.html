@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] canorus new version crash
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2008-September/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20canorus%20new%20version%20crash&In-Reply-To=%3C20080905214043.GA7674%40zonnet.nl%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000124.html">
+   <LINK REL="Next"  HREF="000127.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] canorus new version crash</H1>
+    <B>Martin Tarenskeen</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20canorus%20new%20version%20crash&In-Reply-To=%3C20080905214043.GA7674%40zonnet.nl%3E"
+       TITLE="[Canorus-user] canorus new version crash">m.tarenskeen at zonnet.nl
+       </A><BR>
+    <I>Fri Sep  5 23:40:44 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000124.html">[Canorus-user] canorus new version crash
+</A></li>
+        <LI>Next message: <A HREF="000127.html">[Canorus-user] canorus new version crash
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#126">[ date ]</a>
+              <a href="thread.html#126">[ thread ]</a>
+              <a href="subject.html#126">[ subject ]</a>
+              <a href="author.html#126">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>&gt;<i> Looks like including &lt;QVector&gt; in midirecorder.h fixed compilation. See
+</I>&gt;<i> r794.
+</I>
+OK. It compiles.
+But I still can't use it. When I select &quot;new&quot; canorus freezes and my 
+terminal shows the following message:
+
+
+[<A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">m.tarenskeen at localhost</A> ~]$ Traceback (most recent call last):
+  File &quot;/usr/local/share/canorus/scripts/newdocument.py&quot;, line 4, in newDefaultDocument
+    sheet1 = document.addSheetByName( tr('Sheet%1').replace('%1',str(1)) )
+AttributeError: 'PySwigObject' object has no attribute 'addSheetByName'
+
+???
+
+Am I the only one who can't run and try canorus ?
+
+-- 
+
+Martin
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000124.html">[Canorus-user] canorus new version crash
+</A></li>
+	<LI>Next message: <A HREF="000127.html">[Canorus-user] canorus new version crash
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#126">[ date ]</a>
+              <a href="thread.html#126">[ thread ]</a>
+              <a href="subject.html#126">[ subject ]</a>
+              <a href="author.html#126">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

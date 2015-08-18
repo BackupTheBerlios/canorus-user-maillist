@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Problem at Windows XP
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2007-May/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Problem%20at%20Windows%20XP&In-Reply-To=%3C464ECA22.9090501%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000018.html">
+   <LINK REL="Next"  HREF="000020.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Problem at Windows XP</H1>
+    <B>canorus-user at lists.berlios.de</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Problem%20at%20Windows%20XP&In-Reply-To=%3C464ECA22.9090501%40gmail.com%3E"
+       TITLE="[Canorus-user] Problem at Windows XP">canorus-user at lists.berlios.de
+       </A><BR>
+    <I>Sat May 19 11:57:54 CEST 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000018.html">[Canorus-user] Problem at Windows XP
+</A></li>
+        <LI>Next message: <A HREF="000020.html">[Canorus-user] Problem at Windows XP
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#19">[ date ]</a>
+              <a href="thread.html#19">[ thread ]</a>
+              <a href="subject.html#19">[ subject ]</a>
+              <a href="author.html#19">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE><A HREF="https://lists.berlios.de/mailman/listinfo/canorus-user">canorus-user at lists.berlios.de</A> pravi:
+&gt;<i> Hi Matev&#382;,
+</I>&gt;<i>
+</I>&gt;<i> thanks for your reply. You wrote
+</I>&gt;<i>   
+</I>&gt;&gt;<i> The output below is fine - debugging only.
+</I>&gt;&gt;<i>     
+</I>&gt;<i>
+</I>&gt;<i> I forget to wrote, that I tried -v, but did not get any other result. I have 
+</I>&gt;<i> Visual Studio at my PC too, so I could start to debug something. Is there 
+</I>&gt;<i> any way to may it running inside the studio? Can I check any other installed 
+</I>&gt;<i> modules, probably QT versions?
+</I>&gt;<i>   
+</I>We use Eclipse &amp; Mingw (gcc for windows) for easier
+cross-platform-ability. And gdb for debugging, but MSVC compiler and VS
+debugger might work as well. You might download Qt library separately
+and Canorus source and try to compile &amp; debug it yourself. You might
+also want to download some Qt examples to test SVG stuff only.
+
+Check out developer's docs:
+<A HREF="https://canorus.berlios.de/wiki/index.php/Developers_Guide">https://canorus.berlios.de/wiki/index.php/Developers_Guide</A>
+
+&gt;<i> I found PNG bitmaps in C:\Programme\Canorus\images, some of them are notes, 
+</I>&gt;<i> sharp and flat symbols etc. There are SVG files (xml format) too, but I dont 
+</I>&gt;<i> have a program to view them. Should I check for any missing file?
+</I>&gt;<i>   
+</I>I think icons are all there where they should be - at least on my
+testing platforms where icons weren't rendered correctly. The problem
+IMO is in rendering the scalable SVG icon (btw. this is an open XML
+standard and SVG file format can be viewed in any vector drawing
+application, eg. www.inkscape.org) to a widget (button, tool button,
+canvas) which should work out of the box on any platform but obviously
+it doesn't.
+
+
+Regards.
+- Matev&#382;
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 252 bytes
+Desc: OpenPGP digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/canorus-user/attachments/20070519/e76e7d72/attachment.pgp">https://lists.berlios.de/pipermail/canorus-user/attachments/20070519/e76e7d72/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000018.html">[Canorus-user] Problem at Windows XP
+</A></li>
+	<LI>Next message: <A HREF="000020.html">[Canorus-user] Problem at Windows XP
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#19">[ date ]</a>
+              <a href="thread.html#19">[ thread ]</a>
+              <a href="subject.html#19">[ subject ]</a>
+              <a href="author.html#19">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>

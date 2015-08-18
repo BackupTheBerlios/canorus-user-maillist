@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Canorus-user] Build error
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/canorus-user/2009-May/index.html" >
+   <LINK REL="made" HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Build%20error&In-Reply-To=%3C20090519093957.GA30743%40zonnet.nl%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000242.html">
+   <LINK REL="Next"  HREF="000248.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Canorus-user] Build error</H1>
+    <B>Martin Tarenskeen</B> 
+    <A HREF="mailto:canorus-user%40lists.berlios.de?Subject=Re%3A%20%5BCanorus-user%5D%20Build%20error&In-Reply-To=%3C20090519093957.GA30743%40zonnet.nl%3E"
+       TITLE="[Canorus-user] Build error">m.tarenskeen at zonnet.nl
+       </A><BR>
+    <I>Tue May 19 11:39:58 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000242.html">[Canorus-user] R1057: Printing/Preview/Export from current sheet
+</A></li>
+        <LI>Next message: <A HREF="000248.html">[Canorus-user] Build error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#247">[ date ]</a>
+              <a href="thread.html#247">[ thread ]</a>
+              <a href="subject.html#247">[ subject ]</a>
+              <a href="author.html#247">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I'm trying to build canorus-0.7svn-R1067 but compilation fails with the 
+following messages (I had no problems compiling R1065) :
+
+[  1%] Swig source
+[  1%] Building CXX object src/CMakeFiles/_CanorusPython.dir/scripting/canoruspythonPYTHON_wrap.cxx.o
+[  2%] Building CXX object src/CMakeFiles/_CanorusPython.dir/control/mainwinprogressctl.cpp.o
+In file included from /home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/control/mainwinprogressctl.cpp:10:
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/ui/mainwin.h:17:24: error: ui_mainwin.h: No such file or directory
+In file included from /home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/control/mainwinprogressctl.cpp:10:
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/ui/mainwin.h:61: error: expected class-name before ',' token
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/ui/mainwin.h:61: error: 'Ui' has not been declared
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/ui/mainwin.h:61: error: expected `{' before 'uiMainWindow'
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/ui/mainwin.h:61: error: function definition does not declare parameters
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/control/mainwinprogressctl.cpp: In member function 'void CAMainWinProgressCtl::restoreStatusBar()':
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/control/mainwinprogressctl.cpp:48: error: invalid use of incomplete type 'class CAMainWin'
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/control/mainwinprogressctl.h:13: error: forward declaration of 'class CAMainWin'
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/control/mainwinprogressctl.cpp: In member function 'void CAMainWinProgressCtl::startProgress(CAFile*)':
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/control/mainwinprogressctl.cpp:55: error: invalid use of incomplete type 'class CAMainWin'
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/control/mainwinprogressctl.h:13: error: forward declaration of 'class CAMainWin'
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/control/mainwinprogressctl.cpp:55: error: incomplete type 'CAMainWin' used in nested name specifier
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/control/mainwinprogressctl.cpp:67: error: no matching function for call to 'CAProgressStatusBar::CAProgressStatusBar(CAMainWin*&amp;)'
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/widgets/progressstatusbar.h:21: note: candidates are: CAProgressStatusBar::CAProgressStatusBar(QWidget*)
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/widgets/progressstatusbar.h:17: note:                 CAProgressStatusBar::CAProgressStatusBar(const CAProgressStatusBar&amp;)
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/control/mainwinprogressctl.cpp:68: error: invalid use of incomplete type 'class CAMainWin'
+/home/m.tarenskeen/rpmbuild/SOURCES/canorus-0.7svn.R1067/src/control/mainwinprogressctl.h:13: error: forward declaration of 'class CAMainWin'
+make[2]: *** [src/CMakeFiles/_CanorusPython.dir/control/mainwinprogressctl.cpp.o] Error 1
+make[1]: *** [src/CMakeFiles/_CanorusPython.dir/all] Error 2
+make: *** [all] Error 2
+
+-- 
+
+Martin Tarenskeen
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000242.html">[Canorus-user] R1057: Printing/Preview/Export from current sheet
+</A></li>
+	<LI>Next message: <A HREF="000248.html">[Canorus-user] Build error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#247">[ date ]</a>
+              <a href="thread.html#247">[ thread ]</a>
+              <a href="subject.html#247">[ subject ]</a>
+              <a href="author.html#247">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/canorus-user">More information about the Canorus-user
+mailing list</a><br>
+</body></html>
